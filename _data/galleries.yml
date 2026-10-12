@@ -3,9 +3,9 @@
 - id: digital
   title: Digital
   blurb: Digital work.
-- id: 35mm-caffenol
-  title: 35mm Caffenol
-  blurb: 35mm film, hand-developed in caffenol.
+- id: caffenol
+  title: Caffenol
+  blurb: Film, hand-developed in caffenol.
 - id: polaroid-lifts
   title: Polaroid Lifts
   blurb: Polaroid emulsion lifts.
