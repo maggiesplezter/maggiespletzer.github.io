@@ -22,22 +22,6 @@
   title: Untitled
   alt: Placeholder image
   date: 2026-09-20
-- gallery: caffenol
-  file: placeholder-1.jpg
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-29
-  featured: true
-- gallery: caffenol
-  file: placeholder-2.jpg
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-24
-- gallery: caffenol
-  file: placeholder-3.jpg
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-19
 - gallery: polaroid-lifts
   file: placeholder-1.jpg
   title: Untitled
@@ -86,3 +70,71 @@
   title: Untitled
   alt: Placeholder image
   date: 2026-09-16
+- gallery: caffenol
+  file: img-3407.jpg
+  title: Untitled
+  alt: Backlit foxtail grass seed head against a dark background
+  date: 2026-10-12
+  featured: true
+- gallery: caffenol
+  file: img-3408.jpg
+  title: Untitled
+  alt: Corner of a building beside overhead power lines against the sky
+  date: 2026-10-12
+- gallery: caffenol
+  file: img-3409.jpg
+  title: Untitled
+  alt: Utility pole and tangled wires seen from below against a cloudy sky
+  date: 2026-10-12
+- gallery: caffenol
+  file: img-3410.jpg
+  title: Untitled
+  alt: Chicory flower on a thin stem against a soft background
+  date: 2026-10-12
+- gallery: caffenol
+  file: img-3411.jpg
+  title: Untitled
+  alt: Double exposure of a curved brick wall and a building with trees
+  date: 2026-10-12
+- gallery: caffenol
+  file: img-3412.jpg
+  title: Untitled
+  alt: Double exposure of a statue's face layered with tree branches
+  date: 2026-10-12
+- gallery: caffenol
+  file: img-3413.jpg
+  title: Untitled
+  alt: Window and door trim on the side of a clapboard house
+  date: 2026-08-24
+- gallery: caffenol
+  file: img-3414.jpg
+  title: Untitled
+  alt: Row of beehives in a grassy field at the edge of the woods
+  date: 2026-08-25
+- gallery: caffenol
+  file: img-3415.jpg
+  title: Untitled
+  alt: Close-up of a Queen Anne's lace flower head curling inward
+  date: 2026-10-12
+  featured: true
+- gallery: caffenol
+  file: img-3416.jpg
+  title: Untitled
+  alt: Globe thistle flower head on a tall stem
+  date: 2026-10-12
+- gallery: caffenol
+  file: img-3417.jpg
+  title: Untitled
+  alt: Two people walking past a long white wall under utility poles and old brick buildings
+  date: 2026-09-21
+- gallery: caffenol
+  file: img-3418.jpg
+  title: Untitled
+  alt: Close-up of condensation droplets on glass with a clear streak
+  date: 2026-09-21
+- gallery: caffenol
+  file: img-3419.jpg
+  title: Untitled
+  alt: Close-up of a hand resting against a shoulder in soft light
+  date: 2026-09-21
+  featured: true
