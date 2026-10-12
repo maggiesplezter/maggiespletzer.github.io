@@ -8,28 +8,6 @@
 #   featured: true marks the photo used as the preview image when the site is
 #             shared (the first featured photo is used)
 
-- gallery: polaroid-lifts
-  file: placeholder-1.jpg
-  width: 1200
-  height: 800
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-28
-  featured: true
-- gallery: polaroid-lifts
-  file: placeholder-2.jpg
-  width: 1200
-  height: 800
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-23
-- gallery: polaroid-lifts
-  file: placeholder-3.jpg
-  width: 800
-  height: 1200
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-18
 - gallery: caffenol
   file: img-3407.jpg
   width: 1536
@@ -284,4 +262,32 @@
   height: 1855
   title: Untitled
   alt: Cyanotype of a water droplet splashing up from rippling water
+  date: 2026-10-12
+- gallery: polaroid-lifts
+  file: polaroid-lift-01.jpg
+  width: 1250
+  height: 1248
+  title: Untitled
+  alt: Polaroid emulsion lift of an alley with a brick wall, iron fence and steps, edges torn and wrinkled
+  date: 2026-10-12
+- gallery: polaroid-lifts
+  file: polaroid-lift-02.jpg
+  width: 2199
+  height: 2224
+  title: Untitled
+  alt: Polaroid lifts of a monstera leaf, three pieces arranged together
+  date: 2026-10-12
+- gallery: polaroid-lifts
+  file: polaroid-lift-03.jpg
+  width: 1173
+  height: 1203
+  title: Untitled
+  alt: Polaroid lift of a pincushion protea flower on a deep teal background
+  date: 2026-10-12
+- gallery: polaroid-lifts
+  file: polaroid-lift-04.jpg
+  width: 2400
+  height: 1261
+  title: Untitled
+  alt: Two Polaroid lifts side by side of a white gerbera daisy split across the frames
   date: 2026-10-12
