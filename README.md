@@ -20,7 +20,7 @@ see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Fre
 | You want to…                         | Edit                                             |
 | ------------------------------------ | ------------------------------------------------ |
 | Change name, tagline, social links   | `_config.yml`                                    |
-| Swap in your own mark (sidebar icon) | replace `assets/images/mark.svg` (or set `mark` in `_config.yml`) |
+| Change the mark (sidebar icon)       | replace `assets/images/mark.jpg` (any square image; or set `mark` in `_config.yml`) |
 | Change which GitHub repos are listed | `github_user` in `_config.yml`                   |
 | Add / rename / reorder galleries     | `_data/galleries.yml` (+ a page in `gallery/`)   |
 | Add photos                           | `assets/photos/<gallery>/` + `_data/photos.yml`  |

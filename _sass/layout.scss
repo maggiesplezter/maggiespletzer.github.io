@@ -30,9 +30,15 @@
   margin-block-end: 1.5rem;
   transition: transform var(--ease), opacity var(--ease);
 
-  img { width: 100%; height: auto; }
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 
-  &:hover { transform: rotate(-3deg); }
+  &:hover { transform: rotate(-6deg); }
 }
 
 .site-name {
@@ -203,7 +209,7 @@
     font-size: 1.5rem;
     font-weight: 500;
 
-    img { width: 2.25rem; height: 2.25rem; }
+    img { width: 2.25rem; height: 2.25rem; object-fit: cover; border-radius: 50%; }
   }
 
   .nav-toggle-btn {

@@ -29,9 +29,9 @@ links:
     url: https://www.linkedin.com/in/YOUR-LINKEDIN/
     icon: linkedin.svg
 
-# Your mark at the top of the sidebar. Replace the file with your own drawing
-# (SVG or PNG, roughly square) and update the path if the name changes.
-mark: /assets/images/mark.svg
+# Your mark at the top of the sidebar (a cyanotype flower, shown as a circle).
+# To change it, replace the file with any square image and update the path.
+mark: /assets/images/mark.jpg
 
 timezone: America/Detroit
 
