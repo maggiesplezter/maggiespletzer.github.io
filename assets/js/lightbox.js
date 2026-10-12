@@ -1,15 +1,7 @@
 // Lightbox for any link with .photo-link inside a [data-lightbox-group],
-// plus arrow buttons for the home page scroller. No dependencies.
+// No dependencies.
 (() => {
   const links = [...document.querySelectorAll('[data-lightbox-group] .photo-link')];
-
-  // Home page scroller buttons
-  document.querySelectorAll('.scroll-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const s = document.querySelector('.photo-scroller');
-      if (s) s.scrollBy({ left: Number(btn.dataset.scroll) * s.clientWidth * 0.8, behavior: 'smooth' });
-    });
-  });
 
   if (!links.length) return;
 

@@ -17,13 +17,21 @@ baseurl: ''
 github_user: YOUR-GITHUB-USERNAME
 
 # Sidebar links (rendered in this order).
+# `icon` is a file name in assets/icons/ (any single-color SVG works).
 links:
   - text: GitHub
     url: https://github.com/YOUR-GITHUB-USERNAME
+    icon: github.svg
   - text: Instagram
     url: https://www.instagram.com/YOUR-INSTAGRAM/
+    icon: instagram.svg
   - text: LinkedIn
     url: https://www.linkedin.com/in/YOUR-LINKEDIN/
+    icon: linkedin.svg
+
+# Your mark at the top of the sidebar. Replace the file with your own drawing
+# (SVG or PNG, roughly square) and update the path if the name changes.
+mark: /assets/images/mark.svg
 
 timezone: America/Detroit
 

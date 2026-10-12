@@ -1,23 +1,10 @@
-<section class="sidebar-panel profile">
-  <h2 class="profile-name"><a href="{{ site.baseurl }}/about/">{{ site.name }}</a></h2>
+<div class="sidebar-inner">
+  <a class="mark" href="{{ site.baseurl }}/" aria-label="{{ site.name }} — home">
+    <img src="{{ site.baseurl }}{{ site.mark }}" alt="">
+  </a>
+  <p class="site-name"><a href="{{ site.baseurl }}/">{% assign parts = site.name | split: " " %}{% for w in parts %}<span>{{ w }}</span> {% endfor %}</a></p>
   <p class="tagline">{{ site.tagline }}</p>
   <nav aria-label="Elsewhere online">
-    <ul class="social-links">
-      {% for link in site.links %}
-      <li><a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.text }} <span class="sr-only">(opens in new tab)</span></a></li>
-      {% endfor %}
-    </ul>
+    {% include social-links.html %}
   </nav>
-</section>
-
-<section class="sidebar-panel">
-  <h2>Galleries</h2>
-  <nav aria-label="Galleries">
-    <ul>
-      {% for g in site.data.galleries %}
-      {% assign gurl = '/gallery/' | append: g.id | append: '/' %}
-      <li><a href="{{ site.baseurl }}{{ gurl }}" {% if page.url == gurl %}aria-current="page"{% endif %}>{{ g.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </nav>
-</section>
+</div>

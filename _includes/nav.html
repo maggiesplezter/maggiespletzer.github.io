@@ -1,0 +1,28 @@
+{% assign nav = "home:/,gallery:/gallery/,about:/about/,github:/github/" | split: "," %}
+<header class="topbar">
+  <a class="topbar-brand" href="{{ site.baseurl }}/">
+    <img src="{{ site.baseurl }}{{ site.mark }}" alt="">
+    <span>{{ site.name }}</span>
+  </a>
+  <button class="nav-toggle-btn" popovertarget="nav-menu" aria-expanded="false" aria-label="Menu">
+    <span></span>
+  </button>
+  <nav class="site-nav" aria-label="Main">
+    <ul id="nav-menu" popover="auto">
+      {% for item in nav %}
+      {% assign kv = item | split: ":" %}
+      {% assign label = kv[0] %}
+      {% assign href = kv[1] %}
+      {% assign current = false %}
+      {% if href == "/" %}{% if page.url == "/" %}{% assign current = true %}{% endif %}{% elsif page.url contains href %}{% assign current = true %}{% endif %}
+      <li><a href="{{ site.baseurl }}{{ href }}" {% if current %}aria-current="page"{% endif %}>{{ label }}</a></li>
+      {% endfor %}
+      <li class="nav-social">{% include social-links.html %}</li>
+    </ul>
+  </nav>
+</header>
+<script>
+  document.getElementById('nav-menu').addEventListener('toggle', e => {
+    document.querySelector('.nav-toggle-btn').setAttribute('aria-expanded', e.newState === 'open');
+  });
+</script>

@@ -1,0 +1,10 @@
+<ul class="social-links">
+  {% for link in site.links %}
+  <li>
+    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" title="{{ link.text }}">
+      <span class="icon" style="--icon: url('{{ site.baseurl }}/assets/icons/{{ link.icon }}')" aria-hidden="true"></span>
+      <span class="sr-only">{{ link.text }} (opens in new tab)</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

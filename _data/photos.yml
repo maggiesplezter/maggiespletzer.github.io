@@ -3,7 +3,7 @@
 #   file:     the file name
 #   title:    caption shown under the photo and in the lightbox
 #   alt:      description for screen readers (recommended)
-#   featured: true to include it in the home page scroll
+#   featured: true to include it in the home page feed
 
 - gallery: digital
   file: placeholder-1.jpg

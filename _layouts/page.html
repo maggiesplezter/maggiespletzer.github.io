@@ -1,21 +1,19 @@
 {% include header.html %}
-
-<div class="site-content layout-container">
-  <main id="main-content">
-    <article>
-      <div class="panel">
-        {% if page.title and page.hide_title != true %}<h1>{{ page.title }}</h1>{% endif %}
-        <div class="post-content">
-          {{ content }}
-        </div>
-      </div>
-    </article>
-  </main>
-  <aside aria-label="Sidebar">
+<div class="shell">
+  <aside class="sidebar" aria-label="About {{ site.name }}">
     {% include sidebar.html %}
   </aside>
+
+  <div class="main-col">
+    {% include nav.html %}
+    <main id="main-content" class="content{% if page.wide %} content-wide{% endif %}">
+      {% if page.title and page.hide_title != true %}<h1 class="page-title">{{ page.title }}</h1>{% endif %}
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
 </div>
-{% include footer.html %}
+<script src="{{ site.baseurl }}/assets/js/lightbox.js" defer></script>
 </body>
 
 </html>

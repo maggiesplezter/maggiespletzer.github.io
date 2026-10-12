@@ -1,0 +1,285 @@
+// ---- Shared page bits ---------------------------------------------------------
+.page-title {
+  margin-block-end: 1.5rem;
+}
+
+.lede {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.375rem;
+  color: var(--color-muted);
+  margin-block-end: 2rem;
+}
+
+// ---- Home: vertical feed ------------------------------------------------------
+.photo-feed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 8vw, 6rem);
+
+  figure { margin: 0; }
+
+  // Natural size, capped to the column width and most of the window height,
+  // so portrait and landscape photos both show whole with no letterboxing.
+  img {
+    width: auto;
+    max-width: 100%;
+    max-height: 85vh;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin-block-start: 0.875rem;
+  }
+}
+
+.photo-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+.photo-gallery {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &::before {
+    content: "— ";
+    color: var(--color-muted);
+  }
+}
+
+// ---- Gallery tabs ---------------------------------------------------------------
+.gallery-tabs ul {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+  border-block-end: 1px solid var(--color-line);
+}
+
+.gallery-tabs a {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  color: var(--color-muted);
+  text-decoration: none;
+
+  &:hover { color: var(--color-accent); }
+
+  &[aria-current="page"] {
+    color: var(--color-accent);
+    font-style: italic;
+  }
+}
+
+// ---- Gallery page: uniform square grid ----------------------------------------
+.photo-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
+  gap: 1rem;
+
+  a {
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: var(--color-bg-deep);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity var(--ease);
+  }
+
+  a:hover img { transform: scale(1.03); }
+}
+
+// ---- Gallery index cards --------------------------------------------------------
+.gallery-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(16rem, 100%), 1fr));
+  gap: 2.5rem 1.5rem;
+}
+
+.gallery-card {
+  display: block;
+  color: var(--color-text);
+  text-decoration: none;
+
+  img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: var(--color-bg-deep);
+    margin-block-end: 0.875rem;
+    transition: opacity var(--ease);
+  }
+
+  &:hover {
+    color: var(--color-accent);
+
+    img { opacity: 0.9; }
+  }
+}
+
+.gallery-card-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  line-height: 1.2;
+}
+
+.gallery-card-count {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+// ---- About ---------------------------------------------------------------------------
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: start;
+
+  .portrait { margin: 0; }
+
+  .portrait img {
+    width: 100%;
+    background: var(--color-bg-deep);
+  }
+
+  .about-text p:first-child {
+    font-family: var(--font-display);
+    font-size: 1.625rem;
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 40em) {
+  .about { grid-template-columns: 1fr; }
+}
+
+// ---- GitHub repo list ----------------------------------------------------------
+.repo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repo {
+  padding-block: 1.5rem;
+  border-block-start: 1px solid var(--color-line);
+
+  &:first-child { border-block-start: 0; padding-block-start: 0; }
+}
+
+.repo-name {
+  font-family: var(--font-display);
+  font-size: 1.625rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.repo-descr {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.repo-lang { color: var(--color-accent); }
+
+.repo-loading { color: var(--color-muted); }
+
+// ---- Lightbox --------------------------------------------------------------------
+.lightbox {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 100vw;
+  height: 100dvh;
+  background: rgba(245, 239, 227, 0.98);
+  color: var(--color-text);
+
+  &::backdrop { background: transparent; }
+
+  &[open] {
+    display: grid;
+    place-items: center;
+  }
+
+  figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+  }
+
+  img {
+    max-width: 88vw;
+    max-height: 82dvh;
+    object-fit: contain;
+    box-shadow: 0 20px 40px rgba(34, 37, 43, 0.15);
+  }
+
+  figcaption {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1.25rem;
+  }
+
+  &.single .lb-prev,
+  &.single .lb-next { display: none; }
+}
+
+.lb-btn {
+  position: fixed;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  background: var(--color-bg);
+  color: var(--color-accent);
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: background-color var(--ease), color var(--ease);
+
+  &:hover {
+    background: var(--color-accent);
+    color: var(--color-bg);
+  }
+}
+
+.lb-prev { inset-inline-start: 1.25rem; inset-block-start: 50%; translate: 0 -50%; }
+.lb-next { inset-inline-end: 1.25rem; inset-block-start: 50%; translate: 0 -50%; }
+.lb-close { inset-inline-end: 1.25rem; inset-block-start: 1.25rem; }

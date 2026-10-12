@@ -3,6 +3,13 @@ layout: page
 ---
 {% assign g = site.data.galleries | where: "id", page.gallery | first %}
 {% assign photos = site.data.photos | where: "gallery", page.gallery %}
+<nav class="gallery-tabs" aria-label="Galleries">
+  <ul>
+    {% for t in site.data.galleries %}
+    <li><a href="{{ site.baseurl }}/gallery/{{ t.id }}/" {% if t.id == page.gallery %}aria-current="page"{% endif %}>{{ t.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
 {% if g.blurb %}<p class="lede">{{ g.blurb }}</p>{% endif %}
 {{ content }}
 {% if photos.size > 0 %}
@@ -10,4 +17,3 @@ layout: page
 {% else %}
 <p>Nothing here yet.</p>
 {% endif %}
-<p class="back-link"><a href="{{ site.baseurl }}/gallery/">&larr; All galleries</a></p>

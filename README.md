@@ -3,23 +3,32 @@
 Personal site for photography and software. Built with [Jekyll](https://jekyllrb.com/),
 deployed to GitHub Pages by GitHub Actions, served through Cloudflare.
 
-Structure, theme toggle and deploy workflow are adapted from
+Originally adapted from
 [ryanspletzer/ryanspletzer.github.io](https://github.com/ryanspletzer/ryanspletzer.github.io)
-(CC BY 4.0).
+(CC BY 4.0) — Jekyll setup and deploy workflow.
+
+Design: crème background, cyanotype Prussian-blue accents, fixed left sidebar
+(mark, name, social icons) with the page scrolling on the right; compact top bar
+with a menu on phones.
+
+Bundled assets: Cormorant Garamond and Work Sans fonts (SIL Open Font License,
+see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Free
+(CC BY 4.0, https://fontawesome.com).
 
 ## What's where
 
 | You want to…                         | Edit                                             |
 | ------------------------------------ | ------------------------------------------------ |
 | Change name, tagline, social links   | `_config.yml`                                    |
+| Swap in your own mark (sidebar icon) | replace `assets/images/mark.svg` (or set `mark` in `_config.yml`) |
 | Change which GitHub repos are listed | `github_user` in `_config.yml`                   |
 | Add / rename / reorder galleries     | `_data/galleries.yml` (+ a page in `gallery/`)   |
 | Add photos                           | `assets/photos/<gallery>/` + `_data/photos.yml`  |
-| Pick photos for the home page scroll | `featured: true` in `_data/photos.yml`           |
+| Pick photos for the home page feed   | `featured: true` in `_data/photos.yml`           |
 | Write the About blurb / portrait     | `about.md`, `assets/photos/about/self-portrait.jpg` |
-| Colors                               | `_sass/variables.scss`                           |
+| Colors and fonts                     | `_sass/variables.scss`                           |
 
-Pages: `index.html` (home scroll + gallery cards), `gallery/` (one page per
+Pages: `index.html` (home feed of featured photos), `gallery/` (one page per
 gallery), `about.md`, `github.html` (lists your public repos live from GitHub).
 
 ## Adding photos
@@ -30,7 +39,7 @@ gallery), `about.md`, `github.html` (lists your public repos live from GitHub).
 3. Run `python3 scripts/add_photos.py` — it appends any new files to
    `_data/photos.yml`.
 4. In `_data/photos.yml`, give each one a `title`, an `alt` description, and
-   `featured: true` if it should appear in the home page scroll.
+   `featured: true` if it should appear in the home page feed.
 5. Delete the `placeholder-*.jpg` files and their entries once you have real ones.
 
 To add a gallery, add an entry to `_data/galleries.yml`, create the folder
