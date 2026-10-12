@@ -124,159 +124,164 @@
   alt: Close-up of a hand resting against a shoulder in soft light
   date: 2026-09-21
   featured: true
-- gallery: cyanotypes
-  file: cyanotype-01.jpg
-  width: 312
-  height: 500
-  title: Untitled
-  alt: Cyanotype of a flowering plant stem with leaves and wispy blooms, brushed edges
-  date: 2026-10-12
-- gallery: cyanotypes
-  file: cyanotype-02.jpg
-  width: 500
-  height: 346
-  title: Untitled
-  alt: Cyanotype of a cosmos flower in close-up, petals glowing pale blue
-  date: 2026-10-12
-- gallery: cyanotypes
-  file: cyanotype-03.jpg
-  width: 372
-  height: 500
-  title: Untitled
-  alt: Cyanotype of small pressed flowers arranged in a symmetrical spray
-  date: 2026-10-12
-- gallery: cyanotypes
-  file: cyanotype-04.jpg
-  width: 500
-  height: 375
-  title: Untitled
-  alt: Cyanotype of a close-up eye overlaid with scattered puzzle pieces
-  date: 2026-10-12
-  featured: true
-- gallery: cyanotypes
-  file: cyanotype-05.jpg
-  width: 500
-  height: 396
-  title: Untitled
-  alt: Cyanotype of a leaf skeleton showing a fine network of veins
-  date: 2026-10-12
-  featured: true
 - gallery: digital
   file: img-0312.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: Close-up of soap bubbles swirling with rainbow colours against black
   date: 2026-10-12
 - gallery: digital
-  file: img-0916.jpg
-  width: 500
-  height: 333
+  file: img-1188.jpg
+  width: 1600
+  height: 2400
   title: Untitled
-  alt: Moss-covered branches tangled across a hillside
+  alt: Horsetail stem in close-up with a small insect and a water droplet
   date: 2026-10-12
 - gallery: digital
-  file: img-1396.jpg
-  width: 333
-  height: 500
+  file: img-1204.jpg
+  width: 1600
+  height: 2400
   title: Untitled
-  alt: Purple sweet pea flowers on a climbing stem
+  alt: Ladybug climbing a long green blade of grass
   date: 2026-10-12
 - gallery: digital
-  file: img-1412.jpg
-  width: 500
-  height: 333
+  file: img-1297.jpg
+  width: 1600
+  height: 2400
   title: Untitled
-  alt: Pink cosmos flowers backlit against a soft green background
+  alt: Small green grasshopper on a pink cosmos flower
   date: 2026-10-12
 - gallery: digital
   file: img-1670.jpg
-  width: 500
-  height: 333
+  width: 2400
+  height: 1600
   title: Untitled
   alt: Two small glass ducks facing each other with their reflections
   date: 2026-10-12
 - gallery: digital
   file: img-2191.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: Bare branching tree limbs in black and white against a grey sky
   date: 2026-10-12
 - gallery: digital
+  file: img-2865.jpg
+  width: 1600
+  height: 2400
+  title: Untitled
+  alt: Cluster of small brown mushrooms growing from dark soil
+  date: 2026-10-12
+- gallery: digital
+  file: img-3068.jpg
+  width: 1600
+  height: 2400
+  title: Untitled
+  alt: Praying mantis peeking over a pale ledge
+  date: 2026-10-12
+- gallery: digital
   file: img-3150.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: Pink roses with a rainbow light flare across the frame
   date: 2026-10-12
 - gallery: digital
   file: img-3218.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: Abstract of orange shapes and hexagonal lens flare against blue
   date: 2026-10-12
 - gallery: digital
   file: img-3495.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: Red rose covered in water droplets against dark leaves
   date: 2026-10-12
 - gallery: digital
   file: img-4146.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: White moth resting on a blade of grass
   date: 2026-10-12
 - gallery: digital
   file: img-4201.jpg
-  width: 500
-  height: 333
+  width: 2400
+  height: 1600
   title: Untitled
   alt: Black and white close-up of a textured, veined leaf
   date: 2026-10-12
 - gallery: digital
   file: img-5699.jpg
-  width: 500
-  height: 333
+  width: 2400
+  height: 1600
   title: Untitled
   alt: Frost-covered fallen leaf in close-up
   date: 2026-10-12
 - gallery: digital
   file: img-5757.jpg
-  width: 333
-  height: 500
+  width: 1600
+  height: 2400
   title: Untitled
   alt: Close-up of soft, fuzzy orange seed pods packed together
   date: 2026-10-12
 - gallery: digital
-  file: img-6641.jpg
-  width: 500
-  height: 333
+  file: img-6820.jpg
+  width: 2400
+  height: 1600
   title: Untitled
-  alt: Water droplets on glass in front of a pink and blue background
-  date: 2026-10-12
-- gallery: digital
-  file: img-8020.jpg
-  width: 500
-  height: 333
-  title: Untitled
-  alt: Water droplets hanging from green cedar foliage
-  date: 2026-10-12
-- gallery: digital
-  file: img-8701.jpg
-  width: 500
-  height: 333
-  title: Untitled
-  alt: Water droplet splashing up from a blue ripple
+  alt: Water droplets on glass glowing pink against deep blue
   date: 2026-10-12
 - gallery: digital
   file: img-9466.jpg
-  width: 500
-  height: 333
+  width: 2400
+  height: 1600
   title: Untitled
   alt: Autumn leaves floating on dark reflective water
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-01.jpg
+  width: 1498
+  height: 2400
+  title: Untitled
+  alt: Cyanotype of a flowering plant stem with leaves and wispy blooms, brushed edges
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-02.jpg
+  width: 2400
+  height: 1662
+  title: Untitled
+  alt: Cyanotype of a cosmos flower in close-up, petals glowing pale blue
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-03.jpg
+  width: 1783
+  height: 2400
+  title: Untitled
+  alt: Cyanotype of small pressed flowers arranged in a symmetrical spray
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-04.jpg
+  width: 2400
+  height: 1798
+  title: Untitled
+  alt: Cyanotype of a close-up eye overlaid with scattered puzzle pieces
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-05.jpg
+  width: 2400
+  height: 1901
+  title: Untitled
+  alt: Cyanotype of a leaf skeleton showing a fine network of veins
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-06.jpg
+  width: 2400
+  height: 1855
+  title: Untitled
+  alt: Cyanotype of a water droplet splashing up from rippling water
   date: 2026-10-12
