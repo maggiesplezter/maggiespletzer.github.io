@@ -1,15 +1,12 @@
 # Gallery categories, in the order they appear.
 # `id` must match the folder name under assets/photos/ and the page in gallery/.
-# `blurb` is shown under the tabs on that gallery's page; it may contain HTML links.
+# `blurb` (optional) is shown under the tabs on that gallery's page; it may contain HTML links.
 - id: digital
   title: Digital
-  blurb: Digital work.
 - id: caffenol
   title: Caffenol
   blurb: 'Film I developed with <a href="https://www.caffenol.org/" target="_blank" rel="noopener noreferrer">caffenol</a> developer.'
 - id: polaroid-lifts
   title: Polaroid Lifts
-  blurb: Polaroid emulsion lifts.
 - id: cyanotypes
   title: Cyanotypes
-  blurb: Cyanotype prints.
