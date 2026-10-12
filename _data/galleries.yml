@@ -1,0 +1,17 @@
+# Gallery categories, in the order they appear.
+# `id` must match the folder name under assets/photos/ and the page in gallery/.
+- id: digital
+  title: Digital
+  blurb: Digital work.
+- id: 35mm-caffenol
+  title: 35mm Caffenol
+  blurb: 35mm film, hand-developed in caffenol.
+- id: polaroid-lifts
+  title: Polaroid Lifts
+  blurb: Polaroid emulsion lifts.
+- id: cyanotypes
+  title: Cyanotypes
+  blurb: Cyanotype prints.
+- id: glass
+  title: Glass
+  blurb: Glass.

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+  <meta name="theme-color" content="#1c1c1c" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}">
+  <meta property="og:url" content="{{ site.url | append: page.url }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  {% assign og = site.data.photos | where: "featured", true | first %}
+  {% if og %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/photos/{{ og.gallery }}/{{ og.file }}">{% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+  <link rel="canonical" href="{{ site.url | append: page.url }}">
+  <script>
+    {
+      const s = localStorage.getItem('theme');
+      if (s === 'light' || s === 'dark')
+        document.documentElement.setAttribute('data-theme', s);
+    }
+  </script>
+</head>
+
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <header>
+    <nav class="site-nav" aria-label="Main">
+      <div class="site-nav-inner layout-container">
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.name }}</a>
+        <button class="nav-toggle-btn" popovertarget="nav-menu"
+                aria-expanded="false" aria-label="Menu">
+          <span></span>
+        </button>
+        <ul class="site-nav-links" id="nav-menu" popover="auto">
+          <li><a href="{{ site.baseurl }}/" {% if page.url == "/" %}aria-current="page"{% endif %}>home</a></li>
+          <li><a href="{{ site.baseurl }}/gallery/" {% if page.url contains "/gallery/" %}aria-current="page"{% endif %}>gallery</a></li>
+          <li><a href="{{ site.baseurl }}/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}>about</a></li>
+          <li><a href="{{ site.baseurl }}/github/" {% if page.url == "/github/" %}aria-current="page"{% endif %}>github</a></li>
+          <li class="theme-toggle-item">
+            <button id="theme-toggle" class="theme-toggle" role="switch"
+                    aria-checked="false" aria-label="Dark mode (switch to light)" type="button">
+              <span class="toggle-track">
+                <svg class="toggle-icon toggle-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                  <circle cx="12" cy="12" r="5"/>
+                  <line x1="12" y1="1" x2="12" y2="3"/>
+                  <line x1="12" y1="21" x2="12" y2="23"/>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                  <line x1="1" y1="12" x2="3" y2="12"/>
+                  <line x1="21" y1="12" x2="23" y2="12"/>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </svg>
+                <span class="toggle-thumb"></span>
+                <svg class="toggle-icon toggle-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                     aria-hidden="true">
+                  <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                </svg>
+              </span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+      document.getElementById('nav-menu')
+        .addEventListener('toggle', function(e) {
+          document.querySelector('.nav-toggle-btn')
+            .setAttribute('aria-expanded', e.newState === 'open');
+        });
+      matchMedia('(min-width: 48em)').addEventListener('change', (e) => {
+        if (e.matches) {
+          const nav = document.getElementById('nav-menu');
+          if (nav.matches(':popover-open')) nav.hidePopover();
+        }
+      });
+    </script>
+  </header>

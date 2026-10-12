@@ -1,0 +1,72 @@
+# One entry per photo. Put the file in assets/photos/<gallery>/ and add a line here.
+#   gallery:  which gallery it belongs to (an id from galleries.yml)
+#   file:     the file name
+#   title:    caption shown under the photo and in the lightbox
+#   alt:      description for screen readers (recommended)
+#   featured: true to include it in the home page scroll
+
+- gallery: digital
+  file: placeholder-1.jpg
+  title: Untitled
+  alt: Placeholder image
+  featured: true
+- gallery: digital
+  file: placeholder-2.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: digital
+  file: placeholder-3.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: 35mm-caffenol
+  file: placeholder-1.jpg
+  title: Untitled
+  alt: Placeholder image
+  featured: true
+- gallery: 35mm-caffenol
+  file: placeholder-2.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: 35mm-caffenol
+  file: placeholder-3.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: polaroid-lifts
+  file: placeholder-1.jpg
+  title: Untitled
+  alt: Placeholder image
+  featured: true
+- gallery: polaroid-lifts
+  file: placeholder-2.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: polaroid-lifts
+  file: placeholder-3.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: cyanotypes
+  file: placeholder-1.jpg
+  title: Untitled
+  alt: Placeholder image
+  featured: true
+- gallery: cyanotypes
+  file: placeholder-2.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: cyanotypes
+  file: placeholder-3.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: glass
+  file: placeholder-1.jpg
+  title: Untitled
+  alt: Placeholder image
+  featured: true
+- gallery: glass
+  file: placeholder-2.jpg
+  title: Untitled
+  alt: Placeholder image
+- gallery: glass
+  file: placeholder-3.jpg
+  title: Untitled
+  alt: Placeholder image

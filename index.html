@@ -1,0 +1,32 @@
+---
+layout: page
+hide_title: true
+description: Photography and software by Maggie Spletzer.
+---
+{% assign featured = site.data.photos | where: "featured", true %}
+<section aria-label="Featured photographs">
+  <div class="scroller-head">
+    <h1 class="home-title">Recent work</h1>
+    <div class="scroller-controls">
+      <button type="button" class="scroll-btn" data-scroll="-1" aria-label="Scroll left">&larr;</button>
+      <button type="button" class="scroll-btn" data-scroll="1" aria-label="Scroll right">&rarr;</button>
+    </div>
+  </div>
+  <ul class="photo-scroller" data-lightbox-group tabindex="0" aria-label="Featured photos, scrollable">
+    {% for p in featured %}
+    {% assign src = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' | append: p.file %}
+    {% assign g = site.data.galleries | where: "id", p.gallery | first %}
+    <li>
+      <a href="{{ src }}" class="photo-link" data-title="{{ p.title | escape }}">
+        <img src="{{ src }}" alt="{{ p.alt | default: p.title | escape }}" loading="lazy" decoding="async">
+      </a>
+      <span class="photo-caption">{{ p.title }} &middot; <a href="{{ site.baseurl }}/gallery/{{ g.id }}/">{{ g.title }}</a></span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="home-galleries" aria-label="Galleries">
+  <h2>Galleries</h2>
+  {% include gallery-cards.html %}
+</section>

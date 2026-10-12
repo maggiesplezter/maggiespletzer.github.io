@@ -1,0 +1,13 @@
+---
+layout: page
+---
+{% assign g = site.data.galleries | where: "id", page.gallery | first %}
+{% assign photos = site.data.photos | where: "gallery", page.gallery %}
+{% if g.blurb %}<p class="lede">{{ g.blurb }}</p>{% endif %}
+{{ content }}
+{% if photos.size > 0 %}
+{% include photo-grid.html photos=photos %}
+{% else %}
+<p>Nothing here yet.</p>
+{% endif %}
+<p class="back-link"><a href="{{ site.baseurl }}/gallery/">&larr; All galleries</a></p>

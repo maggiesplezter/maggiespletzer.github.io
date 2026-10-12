@@ -1,0 +1,145 @@
+// Shared panel base (content panel + sidebar panel)
+.panel,
+.sidebar-panel {
+  background-color: var(--color-panel);
+  box-shadow: var(--color-panel-shadow);
+  border: 0;
+  border-radius: var(--radius-block);
+  padding: 1.75rem;
+  margin-block-end: 1.25rem;
+  min-height: 1.25rem;
+}
+
+@media (max-width: 47.9375em) {
+  .panel,
+  .sidebar-panel {
+    border-radius: 0;
+  }
+}
+
+// Main content panel
+.panel h1 {
+  margin-block-start: 0.625rem;
+}
+
+// Post content area — typography and link behavior for rendered Markdown.
+.post-content {
+  p, ul, ol {
+    font-family: var(--font-body);
+  }
+
+  // Underline links for WCAG 2.0 link-in-text-block compliance
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+}
+
+.panel-padded {
+  padding-block-end: 3.75rem;
+}
+
+// Sidebar panels
+.sidebar-panel {
+  h2 {
+    margin-block-start: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+    font-family: var(--font-body);
+  }
+
+  li {
+    margin-block-start: 0.7em;
+    line-height: 1em;
+  }
+}
+
+// Skip navigation link
+.skip-link {
+  position: absolute;
+  inset-block-start: -100%;
+  inset-inline-start: 0;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-skip-link-text);
+  z-index: 1000;
+  text-decoration: none;
+  font-weight: bold;
+
+  &:focus {
+    inset-block-start: 0;
+  }
+}
+
+// Theme toggle — pill-shaped light/dark switch
+// Hidden by default; JS adds .js-ready to reveal it
+.theme-toggle {
+  appearance: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: none;
+
+  &.js-ready {
+    display: inline-flex;
+  }
+
+  &:focus-visible {
+    border-radius: 1rem;
+  }
+}
+
+.toggle-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 0 0.25rem;
+}
+
+.toggle-thumb {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0.125rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  background: var(--color-accent);
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+// Thumb position: OS prefers light (unless user chose dark)
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .toggle-thumb {
+    inset-inline-start: calc(100% - 1.25rem);
+  }
+}
+
+// Thumb position: user explicitly chose light
+:root[data-theme="light"] .toggle-thumb {
+  inset-inline-start: calc(100% - 1.25rem);
+}
+
+// Thumb position: user explicitly chose dark
+:root[data-theme="dark"] .toggle-thumb {
+  inset-inline-start: 0.125rem;
+}
+
+.toggle-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: var(--color-nav-link);
+  flex-shrink: 0;
+}

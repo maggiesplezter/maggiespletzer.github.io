@@ -1,0 +1,100 @@
+:root {
+  color-scheme: dark;
+
+  --color-accent: #7FB2E5;
+  --color-text: rgb(231, 233, 234);
+  --color-bg: #262626;
+  --color-panel: #1c1c1c;
+  --color-footer-bg: #141414;
+  --color-footer-text: #bbb;
+  --color-border: #5e5e5e;
+  --color-blockquote: #bbb;
+  --color-link-hover: #fff;
+  --color-nav-link: #8EA8B4;
+
+  --color-nav-border: #050505;
+  --color-surface-subtle: #2a2a2a;
+  --color-scrollbar-bg: #1c1c1c;
+  --color-scrollbar-thumb: #4a4a4a;
+  --color-panel-shadow: 0 0 0 0, 0 8px 16px rgba(0, 0, 0, 0.2);
+  --color-skip-link-text: #000;
+  --color-photo-bg: #111;
+
+  --font-body: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Menlo, Consolas, "Ubuntu Mono", "DejaVu Sans Mono", monospace;
+
+  --size-body: 1.1875rem;
+  --line-height-body: 1.75;
+
+  --radius-inline: 0.1875em;
+  --radius-block: 0.3125rem;
+
+  --transition-base: 0.3s ease;
+  --transition-fast: 0.2s ease;
+
+  --layout-max-width: 73.125rem;
+}
+
+// Light theme mixin — applied via OS preference or manual toggle
+@mixin light-theme {
+  color-scheme: light;
+
+  --color-accent: #1F5F99;
+  --color-text: #383A42;
+  --color-bg: #eceae6;
+  --color-panel: #FFFFFF;
+  --color-footer-bg: #F5F4F1;
+  --color-footer-text: #57606A;
+  --color-border: #D0D7DE;
+  --color-blockquote: #57606A;
+  --color-link-hover: #000000;
+  --color-nav-link: #57606A;
+
+  --color-nav-border: #D0D7DE;
+  --color-surface-subtle: #F2F1EE;
+  --color-scrollbar-bg: #F2F1EE;
+  --color-scrollbar-thumb: #C0C0C0;
+  --color-panel-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.06);
+  --color-skip-link-text: #FFFFFF;
+  --color-photo-bg: #e2e0dc;
+
+}
+
+// Apply light theme when OS prefers light, unless user chose dark
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    @include light-theme;
+  }
+}
+
+// Apply light theme when user explicitly chose light
+:root[data-theme="light"] {
+  @include light-theme;
+}
+
+// High contrast overrides — dark mode
+@media (prefers-contrast: more) {
+  :root {
+    --color-border: #999;
+      --color-blockquote: #ddd;
+  }
+}
+
+// High contrast overrides — light mode (OS preference, unless user chose dark)
+@media (prefers-contrast: more) and (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-border: #666;
+      --color-blockquote: #333;
+    --color-text: #1A1A1A;
+  }
+}
+
+// High contrast overrides — light mode (user explicit choice)
+@media (prefers-contrast: more) {
+  :root[data-theme="light"] {
+    --color-border: #666;
+      --color-blockquote: #333;
+    --color-text: #1A1A1A;
+  }
+}

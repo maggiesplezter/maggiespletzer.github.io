@@ -1,0 +1,44 @@
+# Jekyll configuration
+
+name: Maggie Spletzer
+title: Maggie Spletzer
+author: Maggie Spletzer
+tagline: photographer // engineer
+description: Photography and software by Maggie Spletzer.
+
+# Absolute site origin — used for canonical links and og: meta tags.
+# Change this to your custom domain once DNS is set up in Cloudflare.
+url: https://www.example.com
+
+# Leave empty for an organization/user site (<org>.github.io) or a custom domain.
+baseurl: ''
+
+# GitHub user or org whose public repos appear on the GitHub page.
+github_user: YOUR-GITHUB-USERNAME
+
+# Sidebar links (rendered in this order).
+links:
+  - text: GitHub
+    url: https://github.com/YOUR-GITHUB-USERNAME
+  - text: Instagram
+    url: https://www.instagram.com/YOUR-INSTAGRAM/
+  - text: LinkedIn
+    url: https://www.linkedin.com/in/YOUR-LINKEDIN/
+
+timezone: America/Detroit
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
+
+sass:
+  sass_dir: _sass
+  style: compressed

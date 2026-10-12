@@ -1,0 +1,11 @@
+{% comment %} Renders a grid of photos. Pass `photos` (array from site.data.photos). {% endcomment %}
+<ul class="photo-grid" data-lightbox-group>
+  {% for p in include.photos %}
+  {% assign src = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' | append: p.file %}
+  <li>
+    <a href="{{ src }}" class="photo-link" data-title="{{ p.title | escape }}">
+      <img src="{{ src }}" alt="{{ p.alt | default: p.title | escape }}" loading="lazy" decoding="async">
+    </a>
+  </li>
+  {% endfor %}
+</ul>
