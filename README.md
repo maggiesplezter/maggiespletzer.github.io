@@ -48,13 +48,15 @@ changing `title`, `gallery` and `permalink`.
 
 ## Run it locally
 
-Needs Ruby 3.4 (see `.ruby-version`).
+On a Mac, run this once (it installs Ruby and the gems, builds, checks links,
+then serves the site):
 
 ```sh
-bundle install
-bundle exec jekyll serve
-# open http://localhost:4000
+bash scripts/setup-mac.sh
 ```
+
+After that, `bash scripts/serve.sh` serves it at http://localhost:4000 and
+reloads the page whenever you save a file. Ctrl+C stops it.
 
 ## One-time setup
 
