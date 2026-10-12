@@ -38,22 +38,6 @@
   title: Untitled
   alt: Placeholder image
   date: 2026-09-18
-- gallery: cyanotypes
-  file: placeholder-1.jpg
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-27
-  featured: true
-- gallery: cyanotypes
-  file: placeholder-2.jpg
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-22
-- gallery: cyanotypes
-  file: placeholder-3.jpg
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-17
 - gallery: glass
   file: placeholder-1.jpg
   title: Untitled
@@ -137,4 +121,31 @@
   title: Untitled
   alt: Close-up of a hand resting against a shoulder in soft light
   date: 2026-09-21
+  featured: true
+- gallery: cyanotypes
+  file: cyanotype-01.jpg
+  title: Untitled
+  alt: Cyanotype of a flowering plant stem with leaves and wispy blooms, brushed edges
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-02.jpg
+  title: Untitled
+  alt: Cyanotype of a cosmos flower in close-up, petals glowing pale blue
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-03.jpg
+  title: Untitled
+  alt: Cyanotype of small pressed flowers arranged in a symmetrical spray
+  date: 2026-10-12
+- gallery: cyanotypes
+  file: cyanotype-04.jpg
+  title: Untitled
+  alt: Cyanotype of a close-up eye overlaid with scattered puzzle pieces
+  date: 2026-10-12
+  featured: true
+- gallery: cyanotypes
+  file: cyanotype-05.jpg
+  title: Untitled
+  alt: Cyanotype of a leaf skeleton showing a fine network of veins
+  date: 2026-10-12
   featured: true
