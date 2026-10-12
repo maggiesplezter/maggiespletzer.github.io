@@ -1,4 +1,4 @@
-{% assign nav = "home:/,gallery:/gallery/,about:/about/,github:/github/" | split: "," %}
+{% assign nav = "home:/,gallery:/gallery/,about:/about/" | split: "," %}
 <header class="topbar">
   <a class="topbar-brand" href="{{ site.baseurl }}/">
     <img src="{{ site.baseurl }}{{ site.mark }}" alt="">
@@ -17,6 +17,7 @@
       {% if href == "/" %}{% if page.url == "/" %}{% assign current = true %}{% endif %}{% elsif page.url contains href %}{% assign current = true %}{% endif %}
       <li><a href="{{ site.baseurl }}{{ href }}" {% if current %}aria-current="page"{% endif %}>{{ label }}</a></li>
       {% endfor %}
+      <li><a href="https://github.com/{{ site.github_user }}" target="_blank" rel="noopener noreferrer">github <span class="sr-only">(opens in new tab)</span></a></li>
       <li class="nav-social">{% include social-links.html %}</li>
     </ul>
   </nav>

@@ -13,14 +13,14 @@ url: https://www.example.com
 # Leave empty for an organization/user site (<org>.github.io) or a custom domain.
 baseurl: ''
 
-# GitHub user or org whose public repos appear on the GitHub page.
-github_user: YOUR-GITHUB-USERNAME
+# Your GitHub username — the "github" menu item links to github.com/<this>.
+github_user: mspletz
 
 # Sidebar links (rendered in this order).
 # `icon` is a file name in assets/icons/ (any single-color SVG works).
 links:
   - text: GitHub
-    url: https://github.com/YOUR-GITHUB-USERNAME
+    url: https://github.com/mspletz
     icon: github.svg
   - text: Instagram
     url: https://www.instagram.com/YOUR-INSTAGRAM/

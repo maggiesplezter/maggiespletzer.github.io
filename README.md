@@ -21,7 +21,7 @@ see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Fre
 | ------------------------------------ | ------------------------------------------------ |
 | Change name, tagline, social links   | `_config.yml`                                    |
 | Change the mark (sidebar icon)       | replace `assets/images/mark.jpg` (any square image; or set `mark` in `_config.yml`) |
-| Change which GitHub repos are listed | `github_user` in `_config.yml`                   |
+| Change where the GitHub menu links   | `github_user` in `_config.yml`                   |
 | Add / rename / reorder galleries     | `_data/galleries.yml` (+ a page in `gallery/`)   |
 | Add photos                           | `assets/photos/<gallery>/` + `_data/photos.yml`  |
 | Pick photos for the home page feed   | `featured: true` in `_data/photos.yml`           |
@@ -29,7 +29,7 @@ see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Fre
 | Colors and fonts                     | `_sass/variables.scss`                           |
 
 Pages: `index.html` (home feed of featured photos), `gallery/` (one page per
-gallery), `about.md`, `github.html` (lists your public repos live from GitHub).
+gallery), `about.md`. The **github** menu item links straight to your GitHub profile.
 
 ## Adding photos
 
@@ -100,7 +100,7 @@ reloads the page whenever you save a file. Ctrl+C stops it.
 2. The **Deploy Jekyll site to Pages** workflow runs on every push to `main`
    (check the **Actions** tab). When it's green the site is live at
    `https://<org>.github.io`.
-3. Fill in `_config.yml`: `github_user`, the three `links`, and `url`.
+3. Fill in `_config.yml`: the Instagram and LinkedIn `links`, and `url`.
 
 ### 3. Custom domain through Cloudflare
 
