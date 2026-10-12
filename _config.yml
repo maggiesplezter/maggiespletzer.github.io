@@ -6,11 +6,10 @@ author: Maggie Spletzer
 tagline: photographer // engineer
 description: Photography and software by Maggie Spletzer.
 
-# Absolute site origin — used for canonical links and og: meta tags.
-# Change this to your custom domain once DNS is set up in Cloudflare.
-url: https://www.example.com
-
-# Leave empty for an organization/user site (<org>.github.io) or a custom domain.
+# url and baseurl are set automatically by the deploy workflow from GitHub
+# Pages (today: https://mspletz.github.io + /maggiespletzer.github.io; with a
+# custom domain: https://yourdomain.com + ''). These values are for local builds.
+url: http://localhost:4000
 baseurl: ''
 
 # Your GitHub username — the "github" menu item links to github.com/<this>.

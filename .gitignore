@@ -4,3 +4,4 @@ _site
 vendor/
 .bundle/
 _photos-inbox/
+_config.ci.yml

@@ -31,14 +31,39 @@ jobs:
           bundler-cache: true # reads .ruby-version, runs bundle install, caches gems
           cache-version: 1
 
+      # Ask GitHub where the site is published, so links work at
+      # mspletz.github.io/maggiespletzer.github.io/ today and at the root of a
+      # custom domain later, with no config changes. Falls back to the root
+      # when Pages isn't enabled (e.g. on pull requests).
+      - name: Setup Pages
+        id: pages
+        continue-on-error: true
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
+
+      - name: Set site URL and base path
+        env:
+          BASE_URL: ${{ steps.pages.outputs.base_url }}
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          origin="$(printf '%s' "$BASE_URL" | sed -E 's#^(https?://[^/]+).*#\1#')"
+          {
+            [ -n "$origin" ] && echo "url: \"$origin\""
+            echo "baseurl: \"$BASE_PATH\""
+          } > _config.ci.yml
+          cat _config.ci.yml
+
       - name: Build with Jekyll
-        # baseurl comes from _config.yml ('' for a custom domain or <org>.github.io)
-        run: bundle exec jekyll build
+        run: bundle exec jekyll build --config _config.yml,_config.ci.yml
         env:
           JEKYLL_ENV: production
 
       - name: Check internal links and images
-        run: bundle exec htmlproofer _site --disable-external --no-enforce-https --ignore-urls "/github.com/"
+        env:
+          BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: |
+          args=(--disable-external --no-enforce-https --ignore-urls "/github.com/")
+          if [ -n "$BASE_PATH" ]; then args+=(--swap-urls "^${BASE_PATH}:"); fi
+          bundle exec htmlproofer _site "${args[@]}"
 
       - name: Upload artifact
         if: github.event_name != 'pull_request'
