@@ -1,33 +1,19 @@
 {% comment %}
-  Square grid of thumbnails; clicking opens the full-size photo in the lightbox.
+  Masonry grid: each photo keeps its own shape, packed into columns.
+  Clicking opens the full-size photo in the lightbox.
   Pass `photos` (array from site.data.photos). `show_gallery=true` labels each
-  photo with its type; `shuffle=true` puts the photos in a new random order on
-  every visit (without JavaScript they stay newest first).
+  photo with its type.
 {% endcomment %}
-<ul class="photo-grid" data-lightbox-group{% if include.shuffle %} id="shuffled-grid"{% endif %}>
+<ul class="photo-grid" data-lightbox-group>
   {% for p in include.photos %}
   {% assign g = site.data.galleries | where: "id", p.gallery | first %}
   {% assign dir = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' %}
   {% capture caption %}{{ p.title }}{% if include.show_gallery %} — {{ g.title }}{% endif %}{% endcapture %}
   <li>
     <a href="{{ dir }}{{ p.file }}" class="photo-link" data-title="{{ caption | strip | escape }}">
-      <img src="{{ dir }}thumbs/{{ p.file }}" alt="{{ p.alt | default: p.title | escape }}" loading="lazy" decoding="async">
+      <img src="{{ dir }}thumbs/{{ p.file }}" alt="{{ p.alt | default: p.title | escape }}"{% if p.width %} width="{{ p.width }}" height="{{ p.height }}"{% endif %} loading="lazy" decoding="async">
       {% if include.show_gallery %}<span class="photo-tag">{{ g.title }}</span>{% endif %}
     </a>
   </li>
   {% endfor %}
 </ul>
-{% if include.shuffle %}
-<script>
-  // Fisher–Yates shuffle of the grid, run before the page is shown
-  (() => {
-    const grid = document.getElementById('shuffled-grid');
-    const items = [...grid.children];
-    for (let i = items.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [items[i], items[j]] = [items[j], items[i]];
-    }
-    grid.replaceChildren(...items);
-  })();
-</script>
-{% endif %}

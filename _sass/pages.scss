@@ -36,32 +36,38 @@
   }
 }
 
-// ---- Gallery page: uniform square grid ----------------------------------------
+// ---- Photo grid: masonry columns, every photo keeps its own shape ---------
 .photo-grid {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(9rem, 28vw, 15rem), 1fr));
-  gap: clamp(0.5rem, 1.5vw, 1rem);
+  columns: 3 14rem;
+  column-gap: clamp(0.5rem, 1.5vw, 1rem);
+
+  li {
+    break-inside: avoid;
+    margin-block-end: clamp(0.5rem, 1.5vw, 1rem);
+  }
 
   a {
     display: block;
-    aspect-ratio: 1;
+    position: relative;
     overflow: hidden;
     background: var(--color-bg-deep);
   }
 
   img {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     transition: transform 0.5s ease, opacity var(--ease);
   }
 
-  a { position: relative; }
+  a:hover img { transform: scale(1.02); }
+}
 
-  a:hover img { transform: scale(1.03); }
+@media (max-width: 30em) {
+  .photo-grid { columns: 2; }
 }
 
 // Type label on the mixed "All" grid — shown on hover / keyboard focus

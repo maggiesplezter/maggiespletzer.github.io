@@ -28,7 +28,7 @@ see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Fre
 | Write the About blurb / portrait     | `about.md`, `assets/photos/about/self-portrait.jpg` |
 | Colors and fonts                     | `_sass/variables.scss`                           |
 
-Pages: `index.html` (home: every photo in a shuffled grid), `gallery/` (one page per
+Pages: `index.html` (home: every photo, types mixed), `gallery/` (one page per
 gallery), `about.md`. The **github** menu item links straight to your GitHub profile.
 
 ## Adding photos
@@ -52,9 +52,11 @@ originals in your own photo library or backup; the repo only holds web copies.
 4. In `_data/photos.yml`, give each new photo a `title` and `alt` text.
 5. Check it with `bash scripts/serve.sh`, then commit and push.
 
-The **home page** shows every photo in a grid, shuffled into a new order on each
-visit. The **gallery** menu drops down to one page per type, where photos are
-newest first by `date` — change a photo's `date` to move it in that order.
+Photos are shown in a masonry grid, each keeping its own shape. The **home
+page** mixes the types in a fixed order — the newest of each type in turn
+(Digital, Caffenol, Polaroid Lifts, Cyanotypes, Glass), then the next newest,
+and so on. The **gallery** menu drops down to one page per type, newest first.
+Change a photo's `date` to move it in either order.
 To remove a photo, delete its entry in `_data/photos.yml` and its two files
 (`assets/photos/<gallery>/<file>` and `.../thumbs/<file>`).
 

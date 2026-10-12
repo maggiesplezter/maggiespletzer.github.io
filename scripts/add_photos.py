@@ -101,10 +101,13 @@ def main() -> None:
                 name, n = f"{base}-{n}.jpg", n + 1
 
             save_resized(img, FULL_EDGE, PHOTOS / gid / name, icc)
+            with Image.open(PHOTOS / gid / name) as saved:
+                width, height = saved.size
             save_resized(img, THUMB_EDGE, PHOTOS / gid / "thumbs" / name, icc)
             known.add((gid, name))
             entries.append(
-                f"- gallery: {gid}\n  file: {name}\n  title: Untitled\n  alt: \n  date: {date.isoformat()}\n"
+                f"- gallery: {gid}\n  file: {name}\n  width: {width}\n  height: {height}\n"
+                f"  title: Untitled\n  alt: \n  date: {date.isoformat()}\n"
             )
 
             done = INBOX / "_imported" / gid

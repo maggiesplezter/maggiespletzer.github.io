@@ -1,6 +1,7 @@
 # One entry per photo. scripts/add_photos.py adds these for you — see README.
 #   gallery:  which gallery it belongs to (an id from galleries.yml)
 #   file:     the file name in assets/photos/<gallery>/
+#   width/height: pixel size of that file (filled in by the import script)
 #   title:    caption shown in the lightbox
 #   alt:      description for screen readers (recommended)
 #   date:     when it was taken (YYYY-MM-DD); gallery pages show newest first
@@ -9,143 +10,197 @@
 
 - gallery: digital
   file: placeholder-1.jpg
+  width: 1200
+  height: 800
   title: Untitled
   alt: Placeholder image
   date: 2026-09-30
   featured: true
 - gallery: digital
   file: placeholder-2.jpg
+  width: 800
+  height: 1200
   title: Untitled
   alt: Placeholder image
   date: 2026-09-25
 - gallery: digital
   file: placeholder-3.jpg
+  width: 1000
+  height: 1000
   title: Untitled
   alt: Placeholder image
   date: 2026-09-20
 - gallery: polaroid-lifts
   file: placeholder-1.jpg
+  width: 1200
+  height: 800
   title: Untitled
   alt: Placeholder image
   date: 2026-09-28
   featured: true
 - gallery: polaroid-lifts
   file: placeholder-2.jpg
+  width: 1200
+  height: 800
   title: Untitled
   alt: Placeholder image
   date: 2026-09-23
 - gallery: polaroid-lifts
   file: placeholder-3.jpg
+  width: 800
+  height: 1200
   title: Untitled
   alt: Placeholder image
   date: 2026-09-18
 - gallery: glass
   file: placeholder-1.jpg
+  width: 1000
+  height: 1000
   title: Untitled
   alt: Placeholder image
   date: 2026-09-26
   featured: true
 - gallery: glass
   file: placeholder-2.jpg
+  width: 1200
+  height: 800
   title: Untitled
   alt: Placeholder image
   date: 2026-09-21
 - gallery: glass
   file: placeholder-3.jpg
+  width: 1200
+  height: 800
   title: Untitled
   alt: Placeholder image
   date: 2026-09-16
 - gallery: caffenol
   file: img-3407.jpg
+  width: 1536
+  height: 2216
   title: Untitled
   alt: Backlit foxtail grass seed head against a dark background
   date: 2026-10-12
   featured: true
 - gallery: caffenol
   file: img-3408.jpg
+  width: 2266
+  height: 1536
   title: Untitled
   alt: Corner of a building beside overhead power lines against the sky
   date: 2026-10-12
 - gallery: caffenol
   file: img-3409.jpg
+  width: 2248
+  height: 1536
   title: Untitled
   alt: Utility pole and tangled wires seen from below against a cloudy sky
   date: 2026-10-12
 - gallery: caffenol
   file: img-3410.jpg
+  width: 2248
+  height: 1536
   title: Untitled
   alt: Chicory flower on a thin stem against a soft background
   date: 2026-10-12
 - gallery: caffenol
   file: img-3411.jpg
+  width: 2340
+  height: 1536
   title: Untitled
   alt: Double exposure of a curved brick wall and a building with trees
   date: 2026-10-12
 - gallery: caffenol
   file: img-3412.jpg
+  width: 1536
+  height: 2066
   title: Untitled
   alt: Double exposure of a statue's face layered with tree branches
   date: 2026-10-12
 - gallery: caffenol
   file: img-3413.jpg
+  width: 1536
+  height: 2282
   title: Untitled
   alt: Window and door trim on the side of a clapboard house
   date: 2026-08-24
 - gallery: caffenol
   file: img-3414.jpg
+  width: 2160
+  height: 1453
   title: Untitled
   alt: Row of beehives in a grassy field at the edge of the woods
   date: 2026-08-25
 - gallery: caffenol
   file: img-3415.jpg
+  width: 1536
+  height: 2238
   title: Untitled
   alt: Close-up of a Queen Anne's lace flower head curling inward
   date: 2026-10-12
   featured: true
 - gallery: caffenol
   file: img-3416.jpg
+  width: 1536
+  height: 2238
   title: Untitled
   alt: Globe thistle flower head on a tall stem
   date: 2026-10-12
 - gallery: caffenol
   file: img-3417.jpg
+  width: 1535
+  height: 2306
   title: Untitled
   alt: Two people walking past a long white wall under utility poles and old brick buildings
   date: 2026-09-21
 - gallery: caffenol
   file: img-3418.jpg
+  width: 1535
+  height: 2306
   title: Untitled
   alt: Close-up of condensation droplets on glass with a clear streak
   date: 2026-09-21
 - gallery: caffenol
   file: img-3419.jpg
+  width: 1535
+  height: 2306
   title: Untitled
   alt: Close-up of a hand resting against a shoulder in soft light
   date: 2026-09-21
   featured: true
 - gallery: cyanotypes
   file: cyanotype-01.jpg
+  width: 312
+  height: 500
   title: Untitled
   alt: Cyanotype of a flowering plant stem with leaves and wispy blooms, brushed edges
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-02.jpg
+  width: 500
+  height: 346
   title: Untitled
   alt: Cyanotype of a cosmos flower in close-up, petals glowing pale blue
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-03.jpg
+  width: 372
+  height: 500
   title: Untitled
   alt: Cyanotype of small pressed flowers arranged in a symmetrical spray
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-04.jpg
+  width: 500
+  height: 375
   title: Untitled
   alt: Cyanotype of a close-up eye overlaid with scattered puzzle pieces
   date: 2026-10-12
   featured: true
 - gallery: cyanotypes
   file: cyanotype-05.jpg
+  width: 500
+  height: 396
   title: Untitled
   alt: Cyanotype of a leaf skeleton showing a fine network of veins
   date: 2026-10-12
