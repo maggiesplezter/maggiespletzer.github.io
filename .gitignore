@@ -3,3 +3,4 @@ _site
 .DS_Store
 vendor/
 .bundle/
+_photos-inbox/

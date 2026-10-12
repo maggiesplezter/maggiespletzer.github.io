@@ -1,10 +1,17 @@
-{% comment %} Renders a grid of photos. Pass `photos` (array from site.data.photos). {% endcomment %}
+{% comment %}
+  Square grid of thumbnails; clicking opens the full-size photo in the lightbox.
+  Pass `photos` (array from site.data.photos). `show_gallery=true` labels each
+  photo with its type (used on the mixed "All" view).
+{% endcomment %}
 <ul class="photo-grid" data-lightbox-group>
   {% for p in include.photos %}
-  {% assign src = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' | append: p.file %}
+  {% assign g = site.data.galleries | where: "id", p.gallery | first %}
+  {% assign dir = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' %}
+  {% capture caption %}{{ p.title }}{% if include.show_gallery %} — {{ g.title }}{% endif %}{% endcapture %}
   <li>
-    <a href="{{ src }}" class="photo-link" data-title="{{ p.title | escape }}">
-      <img src="{{ src }}" alt="{{ p.alt | default: p.title | escape }}" loading="lazy" decoding="async">
+    <a href="{{ dir }}{{ p.file }}" class="photo-link" data-title="{{ caption | strip | escape }}">
+      <img src="{{ dir }}thumbs/{{ p.file }}" alt="{{ p.alt | default: p.title | escape }}" loading="lazy" decoding="async">
+      {% if include.show_gallery %}<span class="photo-tag">{{ g.title }}</span>{% endif %}
     </a>
   </li>
   {% endfor %}

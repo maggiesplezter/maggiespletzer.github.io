@@ -42,6 +42,9 @@ gem install bundler --conservative --no-document
 bundle config set --local path vendor/bundle
 bundle install
 
+step "Installing Pillow (used by scripts/add_photos.py to resize photos)"
+python3 -c "import PIL" 2>/dev/null || python3 -m pip install --user --quiet Pillow
+
 step "Building the site and checking links and images"
 bundle exec jekyll build
 bundle exec htmlproofer _site --disable-external --no-enforce-https --ignore-urls "/github.com/"

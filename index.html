@@ -3,7 +3,7 @@ layout: page
 hide_title: true
 description: Photography and software by Maggie Spletzer.
 ---
-{% assign featured = site.data.photos | where: "featured", true %}
+{% assign featured = site.data.photos | where: "featured", true | sort: "date" | reverse %}
 <h1 class="sr-only">{{ site.name }} — recent work</h1>
 <ol class="photo-feed" data-lightbox-group>
   {% for p in featured %}
@@ -12,7 +12,10 @@ description: Photography and software by Maggie Spletzer.
   <li>
     <figure>
       <a href="{{ src }}" class="photo-link" data-title="{{ p.title | escape }}">
-        <img src="{{ src }}" alt="{{ p.alt | default: p.title | escape }}" {% unless forloop.first %}loading="lazy" {% endunless %}decoding="async">
+        <img src="{{ src }}"
+             srcset="{{ site.baseurl }}/assets/photos/{{ p.gallery }}/thumbs/{{ p.file }} 800w, {{ src }} 2400w"
+             sizes="(max-width: 56em) 100vw, 60rem"
+             alt="{{ p.alt | default: p.title | escape }}" {% unless forloop.first %}loading="lazy" {% endunless %}decoding="async">
       </a>
       <figcaption>
         <span class="photo-title">{{ p.title }}</span>

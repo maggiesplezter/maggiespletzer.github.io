@@ -88,8 +88,8 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(15rem, 100%), 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(9rem, 28vw, 15rem), 1fr));
+  gap: clamp(0.5rem, 1.5vw, 1rem);
 
   a {
     display: block;
@@ -105,7 +105,36 @@
     transition: transform 0.5s ease, opacity var(--ease);
   }
 
+  a { position: relative; }
+
   a:hover img { transform: scale(1.03); }
+}
+
+// Type label on the mixed "All" grid — shown on hover / keyboard focus
+.photo-tag {
+  position: absolute;
+  inset-inline-start: 0.5rem;
+  inset-block-end: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  background: var(--color-bg);
+  color: var(--color-accent);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(0.25rem);
+  transition: opacity var(--ease), transform var(--ease);
+}
+
+.photo-grid a:hover .photo-tag,
+.photo-grid a:focus-visible .photo-tag {
+  opacity: 1;
+  transform: none;
+}
+
+@media (hover: none) {
+  .photo-tag { opacity: 1; transform: none; }
 }
 
 // ---- Gallery index cards --------------------------------------------------------

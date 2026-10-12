@@ -4,4 +4,6 @@ title: Gallery
 permalink: /gallery/
 description: Photography by Maggie Spletzer — digital, 35mm caffenol, Polaroid lifts, cyanotypes and glass.
 ---
-{% include gallery-cards.html %}
+{% assign photos = site.data.photos | sort: "date" | reverse %}
+{% include gallery-tabs.html %}
+{% include photo-grid.html photos=photos show_gallery=true %}

@@ -46,6 +46,7 @@ exclude:
   - Gemfile.lock
   - vendor
   - scripts
+  - _photos-inbox
 
 sass:
   sass_dir: _sass

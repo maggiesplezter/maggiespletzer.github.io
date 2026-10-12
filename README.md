@@ -33,18 +33,36 @@ gallery), `about.md`, `github.html` (lists your public repos live from GitHub).
 
 ## Adding photos
 
-1. Export each photo at about 2000–2500 px on the long edge, JPEG quality ~80
-   (keeps pages fast and the repo small — GitHub Pages sites cap at 1 GB).
-2. Drop the files into the matching folder, e.g. `assets/photos/cyanotypes/`.
-3. Run `python3 scripts/add_photos.py` — it appends any new files to
-   `_data/photos.yml`.
-4. In `_data/photos.yml`, give each one a `title`, an `alt` description, and
-   `featured: true` if it should appear in the home page feed.
-5. Delete the `placeholder-*.jpg` files and their entries once you have real ones.
+Photos live in this repo, resized for the web. Keep your full-resolution
+originals in your own photo library or backup; the repo only holds web copies.
 
-To add a gallery, add an entry to `_data/galleries.yml`, create the folder
-`assets/photos/<id>/`, and copy any file in `gallery/` to `gallery/<id>.md`,
-changing `title`, `gallery` and `permalink`.
+1. Export photos from your editor as JPEG (or PNG/TIFF/WebP), any size.
+2. Drop them into `_photos-inbox/<gallery>/`, e.g. `_photos-inbox/cyanotypes/`
+   (gallery ids are in `_data/galleries.yml`). This folder is never committed.
+3. Run:
+
+   ```sh
+   python3 scripts/add_photos.py
+   ```
+
+   For each photo it makes a 2400 px web copy and an 800 px thumbnail in
+   `assets/photos/<gallery>/`, strips camera metadata (including GPS location),
+   reads the date it was taken, adds an entry to `_data/photos.yml`, and moves
+   the original to `_photos-inbox/_imported/`.
+4. In `_data/photos.yml`, give each new photo a `title` and `alt` text, and
+   add `featured: true` to put it in the home page feed.
+5. Check it with `bash scripts/serve.sh`, then commit and push.
+
+The **Gallery** page shows every photo mixed together, newest first by `date`;
+the tabs filter to one type. Change a photo's `date` to move it in the order.
+To remove a photo, delete its entry in `_data/photos.yml` and its two files
+(`assets/photos/<gallery>/<file>` and `.../thumbs/<file>`).
+
+At ~400 KB per photo plus thumbnail, the repo can hold a couple of thousand
+photos before nearing GitHub Pages' 1 GB limit.
+
+To add a gallery type, add an entry to `_data/galleries.yml` and copy any file
+in `gallery/` to `gallery/<id>.md`, changing `title`, `gallery` and `permalink`.
 
 ## Run it locally
 

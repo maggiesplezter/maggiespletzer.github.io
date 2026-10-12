@@ -1,0 +1,8 @@
+<nav class="gallery-tabs" aria-label="Filter by type">
+  <ul>
+    <li><a href="{{ site.baseurl }}/gallery/" {% if page.url == "/gallery/" %}aria-current="page"{% endif %}>All</a></li>
+    {% for t in site.data.galleries %}
+    <li><a href="{{ site.baseurl }}/gallery/{{ t.id }}/" {% if t.id == page.gallery %}aria-current="page"{% endif %}>{{ t.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>
