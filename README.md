@@ -11,7 +11,7 @@ Design: crème background, cyanotype Prussian-blue accents, fixed left sidebar
 (mark, name, social icons) with the page scrolling on the right; compact top bar
 with a menu on phones.
 
-Bundled assets: Cormorant Garamond and Work Sans fonts (SIL Open Font License,
+Bundled assets: Cormorant Garamond, Young Serif (your name) and Work Sans fonts (SIL Open Font License,
 see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Free
 (CC BY 4.0, https://fontawesome.com).
 

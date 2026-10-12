@@ -16,6 +16,14 @@
 }
 
 @font-face {
+  font-family: "Young Serif";
+  src: url("../fonts/young-serif.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Work Sans";
   src: url("../fonts/work-sans.woff") format("woff");
   font-weight: 100 900;
@@ -37,6 +45,7 @@
   --color-accent-soft: rgba(29, 78, 137, 0.08);
 
   --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-name: "Young Serif", Georgia, serif;   // just for "Maggie Spletzer"
   --font-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;
 
   --sidebar-width: 18rem;
