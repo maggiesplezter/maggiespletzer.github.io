@@ -24,11 +24,11 @@ see `assets/fonts/`); GitHub, Instagram and LinkedIn icons from Font Awesome Fre
 | Change where the GitHub menu links   | `github_user` in `_config.yml`                   |
 | Add / rename / reorder galleries     | `_data/galleries.yml` (+ a page in `gallery/`)   |
 | Add photos                           | `assets/photos/<gallery>/` + `_data/photos.yml`  |
-| Pick photos for the home page feed   | `featured: true` in `_data/photos.yml`           |
+| Pick the link-preview photo          | `featured: true` in `_data/photos.yml` (first one wins) |
 | Write the About blurb / portrait     | `about.md`, `assets/photos/about/self-portrait.jpg` |
 | Colors and fonts                     | `_sass/variables.scss`                           |
 
-Pages: `index.html` (home feed of featured photos), `gallery/` (one page per
+Pages: `index.html` (home: every photo in a shuffled grid), `gallery/` (one page per
 gallery), `about.md`. The **github** menu item links straight to your GitHub profile.
 
 ## Adding photos
@@ -49,12 +49,12 @@ originals in your own photo library or backup; the repo only holds web copies.
    `assets/photos/<gallery>/`, strips camera metadata (including GPS location),
    reads the date it was taken, adds an entry to `_data/photos.yml`, and moves
    the original to `_photos-inbox/_imported/`.
-4. In `_data/photos.yml`, give each new photo a `title` and `alt` text, and
-   add `featured: true` to put it in the home page feed.
+4. In `_data/photos.yml`, give each new photo a `title` and `alt` text.
 5. Check it with `bash scripts/serve.sh`, then commit and push.
 
-The **Gallery** page shows every photo mixed together, newest first by `date`;
-the tabs filter to one type. Change a photo's `date` to move it in the order.
+The **home page** shows every photo in a grid, shuffled into a new order on each
+visit. The **gallery** menu drops down to one page per type, where photos are
+newest first by `date` — change a photo's `date` to move it in that order.
 To remove a photo, delete its entry in `_data/photos.yml` and its two files
 (`assets/photos/<gallery>/<file>` and `.../thumbs/<file>`).
 

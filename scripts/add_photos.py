@@ -15,8 +15,7 @@ For each photo this:
     (from the camera, or the file's date if there isn't one);
   - moves the original to _photos-inbox/_imported/<gallery>/.
 
-Then edit _data/photos.yml to give each photo a title, alt text, and
-`featured: true` if it should appear on the home page.
+Then edit _data/photos.yml to give each photo a title and alt text.
 
 It also creates any missing thumbnails for photos already on the site.
 Needs Pillow:  python3 -m pip install --user Pillow
@@ -38,7 +37,7 @@ PHOTOS = ROOT / "assets" / "photos"
 DATA = ROOT / "_data" / "photos.yml"
 GALLERIES = ROOT / "_data" / "galleries.yml"
 
-FULL_EDGE = 2400   # long edge of the copy shown in the lightbox / home feed
+FULL_EDGE = 2400   # long edge of the full-size copy shown in the lightbox
 THUMB_EDGE = 800   # long edge of grid thumbnails
 QUALITY = 82
 EXTS = {".jpg", ".jpeg", ".png", ".tif", ".tiff", ".webp"}

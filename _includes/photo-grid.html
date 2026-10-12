@@ -1,9 +1,10 @@
 {% comment %}
   Square grid of thumbnails; clicking opens the full-size photo in the lightbox.
   Pass `photos` (array from site.data.photos). `show_gallery=true` labels each
-  photo with its type (used on the mixed "All" view).
+  photo with its type; `shuffle=true` puts the photos in a new random order on
+  every visit (without JavaScript they stay newest first).
 {% endcomment %}
-<ul class="photo-grid" data-lightbox-group>
+<ul class="photo-grid" data-lightbox-group{% if include.shuffle %} id="shuffled-grid"{% endif %}>
   {% for p in include.photos %}
   {% assign g = site.data.galleries | where: "id", p.gallery | first %}
   {% assign dir = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' %}
@@ -16,3 +17,17 @@
   </li>
   {% endfor %}
 </ul>
+{% if include.shuffle %}
+<script>
+  // Fisher–Yates shuffle of the grid, run before the page is shown
+  (() => {
+    const grid = document.getElementById('shuffled-grid');
+    const items = [...grid.children];
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    grid.replaceChildren(...items);
+  })();
+</script>
+{% endif %}

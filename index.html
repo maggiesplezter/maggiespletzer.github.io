@@ -1,27 +1,8 @@
 ---
 layout: page
 hide_title: true
-description: Photography and software by Maggie Spletzer.
+description: Photography and software by Maggie Spletzer — digital, caffenol, Polaroid lifts, cyanotypes and glass.
 ---
-{% assign featured = site.data.photos | where: "featured", true | sort: "date" | reverse %}
-<h1 class="sr-only">{{ site.name }} — recent work</h1>
-<ol class="photo-feed" data-lightbox-group>
-  {% for p in featured %}
-  {% assign src = site.baseurl | append: '/assets/photos/' | append: p.gallery | append: '/' | append: p.file %}
-  {% assign g = site.data.galleries | where: "id", p.gallery | first %}
-  <li>
-    <figure>
-      <a href="{{ src }}" class="photo-link" data-title="{{ p.title | escape }}">
-        <img src="{{ src }}"
-             srcset="{{ site.baseurl }}/assets/photos/{{ p.gallery }}/thumbs/{{ p.file }} 800w, {{ src }} 2400w"
-             sizes="(max-width: 56em) 100vw, 60rem"
-             alt="{{ p.alt | default: p.title | escape }}" {% unless forloop.first %}loading="lazy" {% endunless %}decoding="async">
-      </a>
-      <figcaption>
-        <span class="photo-title">{{ p.title }}</span>
-        <a class="photo-gallery" href="{{ site.baseurl }}/gallery/{{ g.id }}/">{{ g.title }}</a>
-      </figcaption>
-    </figure>
-  </li>
-  {% endfor %}
-</ol>
+{% assign photos = site.data.photos | sort: "date" | reverse %}
+<h1 class="sr-only">{{ site.name }} — photographs</h1>
+{% include photo-grid.html photos=photos show_gallery=true shuffle=true %}

@@ -1,10 +1,11 @@
 # One entry per photo. scripts/add_photos.py adds these for you — see README.
 #   gallery:  which gallery it belongs to (an id from galleries.yml)
 #   file:     the file name in assets/photos/<gallery>/
-#   title:    caption shown in the lightbox and home feed
+#   title:    caption shown in the lightbox
 #   alt:      description for screen readers (recommended)
-#   date:     when it was taken (YYYY-MM-DD); the gallery shows newest first
-#   featured: true to include it in the home page feed
+#   date:     when it was taken (YYYY-MM-DD); gallery pages show newest first
+#   featured: true marks the photo used as the preview image when the site is
+#             shared (the first featured photo is used)
 
 - gallery: digital
   file: placeholder-1.jpg
