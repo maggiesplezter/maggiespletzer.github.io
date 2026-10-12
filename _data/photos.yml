@@ -8,28 +8,6 @@
 #   featured: true marks the photo used as the preview image when the site is
 #             shared (the first featured photo is used)
 
-- gallery: digital
-  file: placeholder-1.jpg
-  width: 1200
-  height: 800
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-30
-  featured: true
-- gallery: digital
-  file: placeholder-2.jpg
-  width: 800
-  height: 1200
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-25
-- gallery: digital
-  file: placeholder-3.jpg
-  width: 1000
-  height: 1000
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-20
 - gallery: polaroid-lifts
   file: placeholder-1.jpg
   width: 1200
@@ -52,28 +30,6 @@
   title: Untitled
   alt: Placeholder image
   date: 2026-09-18
-- gallery: glass
-  file: placeholder-1.jpg
-  width: 1000
-  height: 1000
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-26
-  featured: true
-- gallery: glass
-  file: placeholder-2.jpg
-  width: 1200
-  height: 800
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-21
-- gallery: glass
-  file: placeholder-3.jpg
-  width: 1200
-  height: 800
-  title: Untitled
-  alt: Placeholder image
-  date: 2026-09-16
 - gallery: caffenol
   file: img-3407.jpg
   width: 1536
@@ -205,3 +161,122 @@
   alt: Cyanotype of a leaf skeleton showing a fine network of veins
   date: 2026-10-12
   featured: true
+- gallery: digital
+  file: img-0312.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Close-up of soap bubbles swirling with rainbow colours against black
+  date: 2026-10-12
+- gallery: digital
+  file: img-0916.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Moss-covered branches tangled across a hillside
+  date: 2026-10-12
+- gallery: digital
+  file: img-1396.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Purple sweet pea flowers on a climbing stem
+  date: 2026-10-12
+- gallery: digital
+  file: img-1412.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Pink cosmos flowers backlit against a soft green background
+  date: 2026-10-12
+- gallery: digital
+  file: img-1670.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Two small glass ducks facing each other with their reflections
+  date: 2026-10-12
+- gallery: digital
+  file: img-2191.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Bare branching tree limbs in black and white against a grey sky
+  date: 2026-10-12
+- gallery: digital
+  file: img-3150.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Pink roses with a rainbow light flare across the frame
+  date: 2026-10-12
+- gallery: digital
+  file: img-3218.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Abstract of orange shapes and hexagonal lens flare against blue
+  date: 2026-10-12
+- gallery: digital
+  file: img-3495.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Red rose covered in water droplets against dark leaves
+  date: 2026-10-12
+- gallery: digital
+  file: img-4146.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: White moth resting on a blade of grass
+  date: 2026-10-12
+- gallery: digital
+  file: img-4201.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Black and white close-up of a textured, veined leaf
+  date: 2026-10-12
+- gallery: digital
+  file: img-5699.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Frost-covered fallen leaf in close-up
+  date: 2026-10-12
+- gallery: digital
+  file: img-5757.jpg
+  width: 333
+  height: 500
+  title: Untitled
+  alt: Close-up of soft, fuzzy orange seed pods packed together
+  date: 2026-10-12
+- gallery: digital
+  file: img-6641.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Water droplets on glass in front of a pink and blue background
+  date: 2026-10-12
+- gallery: digital
+  file: img-8020.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Water droplets hanging from green cedar foliage
+  date: 2026-10-12
+- gallery: digital
+  file: img-8701.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Water droplet splashing up from a blue ripple
+  date: 2026-10-12
+- gallery: digital
+  file: img-9466.jpg
+  width: 500
+  height: 333
+  title: Untitled
+  alt: Autumn leaves floating on dark reflective water
+  date: 2026-10-12

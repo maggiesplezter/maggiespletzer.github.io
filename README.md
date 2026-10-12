@@ -54,7 +54,7 @@ originals in your own photo library or backup; the repo only holds web copies.
 
 Photos are shown in a masonry grid, each keeping its own shape. The **home
 page** mixes the types in a fixed order — the newest of each type in turn
-(Digital, Caffenol, Polaroid Lifts, Cyanotypes, Glass), then the next newest,
+(Digital, Caffenol, Polaroid Lifts, Cyanotypes), then the next newest,
 and so on. The **gallery** menu drops down to one page per type, newest first.
 Change a photo's `date` to move it in either order.
 To remove a photo, delete its entry in `_data/photos.yml` and its two files
