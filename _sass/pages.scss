@@ -1,5 +1,9 @@
 // ---- Shared page bits ---------------------------------------------------------
 .page-title {
+  font-family: var(--font-name);   // matches "Maggie Spletzer"
+  font-weight: 400;
+  font-size: clamp(2.25rem, 4.5vw, 3rem);
+  letter-spacing: -0.005em;
   margin-block-end: 1.5rem;
 }
 
