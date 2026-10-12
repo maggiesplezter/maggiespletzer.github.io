@@ -27,8 +27,8 @@
 }
 
 .gallery-tabs a {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
+  font-family: var(--font-tabs);
+  font-size: 1.125rem;
   color: var(--color-muted);
   text-decoration: none;
 
@@ -38,6 +38,11 @@
     color: var(--color-accent);
     font-style: italic;
   }
+}
+
+@media (max-width: 30em) {
+  .gallery-tabs ul { gap: 0.4rem 0.85rem; }
+  .gallery-tabs a { font-size: 1rem; }
 }
 
 // ---- Photo grid: masonry columns, every photo keeps its own shape ---------

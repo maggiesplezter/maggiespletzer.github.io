@@ -24,6 +24,22 @@
 }
 
 @font-face {
+  font-family: "Lora";
+  src: url("../fonts/lora.woff") format("woff");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("../fonts/lora-italic.woff") format("woff");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Work Sans";
   src: url("../fonts/work-sans.woff") format("woff");
   font-weight: 100 900;
@@ -45,7 +61,8 @@
   --color-accent-soft: rgba(29, 78, 137, 0.08);
 
   --font-display: "Cormorant Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
-  --font-name: "Young Serif", Georgia, serif;   // just for "Maggie Spletzer"
+  --font-name: "Young Serif", Georgia, serif;   // "Maggie Spletzer" and page titles
+  --font-tabs: "Lora", Georgia, serif;          // gallery type tabs
   --font-body: "Work Sans", "Helvetica Neue", Arial, sans-serif;
 
   --sidebar-width: 18rem;
