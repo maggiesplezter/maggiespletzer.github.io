@@ -1,8 +1,8 @@
 {% comment %}
   Masonry grid: each photo keeps its own shape, packed into columns.
   Clicking opens the full-size photo in the lightbox.
-  Pass `photos` (array from site.data.photos). `show_gallery=true` labels each
-  photo with its type.
+  Pass `photos` (array from site.data.photos). `show_gallery=true` adds the photo's type
+  to its caption in the lightbox.
 {% endcomment %}
 <ul class="photo-grid" data-lightbox-group>
   {% for p in include.photos %}
@@ -12,7 +12,6 @@
   <li>
     <a href="{{ dir }}{{ p.file }}" class="photo-link" data-title="{{ caption | strip | escape }}">
       <img src="{{ dir }}thumbs/{{ p.file }}" alt="{{ p.alt | default: p.title | escape }}"{% if p.width %} width="{{ p.width }}" height="{{ p.height }}"{% endif %} loading="lazy" decoding="async">
-      {% if include.show_gallery %}<span class="photo-tag">{{ g.title }}</span>{% endif %}
     </a>
   </li>
   {% endfor %}
