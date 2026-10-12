@@ -144,7 +144,12 @@
   gap: clamp(1.5rem, 4vw, 3.5rem);
   align-items: start;
 
-  .portrait { margin: 0; }
+  // Portrait stays put while a long bio scrolls past it (desktop only)
+  .portrait {
+    margin: 0;
+    position: sticky;
+    inset-block-start: 2rem;
+  }
 
   .portrait img {
     width: 100%;
@@ -158,8 +163,19 @@
   }
 }
 
+// Bio text box
+.bio-box {
+  background: #FBF8F2;
+  border: 1px solid var(--color-line);
+  border-block-start: 3px solid var(--color-accent);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+
+  > :last-child { margin-block-end: 0; }
+}
+
 @media (max-width: 40em) {
   .about { grid-template-columns: 1fr; }
+  .about .portrait { position: static; }
 }
 
 // ---- GitHub repo list ----------------------------------------------------------
