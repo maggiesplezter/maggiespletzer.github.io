@@ -1,5 +1,5 @@
-// Lightbox for any link with .photo-link inside a [data-lightbox-group],
-// No dependencies.
+// Lightbox for any link with .photo-link inside a [data-lightbox-group].
+// Shows the photo full size with no caption. No dependencies.
 (() => {
   const links = [...document.querySelectorAll('[data-lightbox-group] .photo-link')];
 
@@ -11,7 +11,6 @@
   dlg.innerHTML = `
     <figure>
       <img alt="">
-      <figcaption></figcaption>
     </figure>
     <button type="button" class="lb-btn lb-prev" aria-label="Previous photo">&larr;</button>
     <button type="button" class="lb-btn lb-next" aria-label="Next photo">&rarr;</button>
@@ -19,7 +18,6 @@
   document.body.appendChild(dlg);
 
   const img = dlg.querySelector('img');
-  const cap = dlg.querySelector('figcaption');
   let group = [];
   let i = 0;
 
@@ -28,7 +26,6 @@
     const a = group[i];
     img.src = a.href;
     img.alt = a.querySelector('img')?.alt ?? '';
-    cap.textContent = a.dataset.title || '';
     dlg.classList.toggle('single', group.length < 2);
   };
 

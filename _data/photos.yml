@@ -2,7 +2,7 @@
 #   gallery:  which gallery it belongs to (an id from galleries.yml)
 #   file:     the file name in assets/photos/<gallery>/
 #   width/height: pixel size of that file (filled in by the import script)
-#   title:    caption shown in the lightbox
+#   title:    the photo's name (used as alt text if `alt` is empty; not shown on the site)
 #   alt:      description for screen readers (recommended)
 #   date:     when it was taken (YYYY-MM-DD); gallery pages show newest first
 #   featured: true marks the photo used as the preview image when the site is

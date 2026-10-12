@@ -143,15 +143,9 @@
 
   img {
     max-width: 88vw;
-    max-height: 82dvh;
+    max-height: 88dvh;
     object-fit: contain;
     box-shadow: 0 20px 40px rgba(34, 37, 43, 0.15);
-  }
-
-  figcaption {
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: 1.25rem;
   }
 
   &.single .lb-prev,
