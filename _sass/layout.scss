@@ -278,7 +278,8 @@
     z-index: 50;
     justify-content: space-between;
     margin-inline: calc(-1 * var(--gutter));
-    padding: 0.75rem var(--gutter);
+    height: var(--topbar-height);   // fixed, so the open menu can sit right under it
+    padding: 0 var(--gutter);
     background: var(--color-bg);
     border-block-end: 1px solid var(--color-line);
   }
@@ -289,11 +290,27 @@
     gap: 0.625rem;
     color: var(--color-text);
     text-decoration: none;
-    font-family: var(--font-name);
-    font-size: 1.3125rem;
     font-weight: 400;
 
-    img { width: 2.25rem; height: 2.25rem; object-fit: cover; border-radius: 50%; }
+    img { width: 2.75rem; height: 2.75rem; object-fit: cover; border-radius: 50%; }
+  }
+
+  .topbar-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  .topbar-name {
+    font-family: var(--font-name);
+    font-size: 1.3125rem;
+  }
+
+  .topbar-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--color-muted);
   }
 
   // Anchor the menu button to the right edge: the icon's right side lines up
@@ -341,7 +358,7 @@
 
   .site-nav > ul:popover-open {
     position: fixed;
-    inset: 4.25rem 0 auto;
+    inset: var(--topbar-height) 0 auto;
     margin: 0;
     width: 100%;
     flex-direction: column;

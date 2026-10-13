@@ -1,7 +1,10 @@
 <header class="topbar">
   <a class="topbar-brand" href="{{ site.baseurl }}/">
     <img src="{{ site.baseurl }}{{ site.mark }}" alt="">
-    <span>{{ site.name }}</span>
+    <span class="topbar-text">
+      <span class="topbar-name">{{ site.name }}</span>
+      <span class="topbar-tagline">{{ site.tagline }}</span>
+    </span>
   </a>
   <button class="nav-toggle-btn" popovertarget="nav-menu" aria-expanded="false" aria-label="Menu">
     <span></span>
