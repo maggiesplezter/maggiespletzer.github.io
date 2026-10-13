@@ -137,17 +137,24 @@
 
   &::backdrop { background: transparent; }
 
-  &[open] {
-    display: grid;
-    place-items: center;
+  &[open] { display: block; }
+
+  overflow: hidden;
+
+  // Three photos side by side: [previous][current][next]; the track is shifted
+  // so "current" fills the screen.
+  .lb-track {
+    display: flex;
+    width: 300vw;
+    height: 100%;
+    will-change: transform;
+    touch-action: none;   // swipes are handled in lightbox.js
   }
 
-  figure {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.875rem;
+  .lb-slide {
+    flex: 0 0 100vw;
+    display: grid;
+    place-items: center;
   }
 
   // Leave room either side for the arrow buttons so they never sit on the photo:
@@ -159,7 +166,7 @@
     box-shadow: 0 20px 40px rgba(34, 37, 43, 0.15);
     user-select: none;
     -webkit-user-select: none;
-    touch-action: none;   // we handle swipes ourselves
+    -webkit-touch-callout: none;
   }
 
   &.single .lb-prev,
@@ -168,7 +175,7 @@
 
 // Touch screens: swipe instead of arrows, so the photo can use the full width.
 @media (hover: none) and (pointer: coarse), (max-width: 40em) {
-  .lightbox img {
+  .lightbox .lb-slide img {
     max-width: calc(100vw - 2rem);
     max-height: calc(100dvh - 7rem);   // clear of the close button
   }
