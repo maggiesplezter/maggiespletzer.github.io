@@ -341,9 +341,9 @@
     margin: 0;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;   // everything left-aligned, text lined up with the mark
     gap: 0;
-    padding: 1rem 0 1.5rem;
+    padding: 1rem calc(var(--gutter) - 1rem) 1.5rem;
     background: var(--color-bg);
     border-block-end: 1px solid var(--color-line);
     box-shadow: 0 12px 24px rgba(34, 37, 43, 0.08);
@@ -354,17 +354,16 @@
   .site-nav > ul > li > a,
   .sub-toggle {
     display: block;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0;
+    margin-inline: 1rem;   // margin, not padding, so the current-page underline sits under the word
     font-size: 0.9375rem;
   }
 
-  // In the phone menu the gallery types are always listed under "gallery",
-  // left-aligned so they start under the G. The group as a whole stays centred.
+  // In the phone menu the gallery types are always listed under "gallery"
   .has-sub { text-align: start; }
 
   .sub-toggle {
     pointer-events: none;
-    margin-inline: 0;
     text-align: start;
     border-block-end: 0;
     padding-block-end: 0.25rem;
@@ -387,15 +386,17 @@
 
     &::before { display: none; }
 
-    a { padding: 0.3rem 1rem; font-size: 1.25rem; text-align: start; }
+    a { padding: 0.3rem 1rem; font-size: 1.25rem; text-align: start; background: none; }
   }
 
   .site-nav .nav-social {
     display: block;
-    margin-block-start: 1rem;
+    align-self: stretch;
+    margin: 1rem 1rem 0;
     padding-block-start: 1.25rem;
     border-block-start: 1px solid var(--color-line);
-    width: min(16rem, 80%);
+
+    .social-links { justify-content: flex-start; }
   }
 
   .content {
