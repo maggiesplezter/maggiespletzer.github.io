@@ -224,8 +224,8 @@
   a {
     display: block;
     padding: 0.4rem 1.25rem;
-    font-family: var(--font-display);
-    font-size: 1.1875rem;
+    font-family: var(--font-tabs);   // Lora, same as the gallery tabs
+    font-size: 1.0625rem;
     color: var(--color-text);
     text-decoration: none;
     white-space: nowrap;
@@ -385,7 +385,7 @@
 
     &::before { display: none; }
 
-    a { padding: 0.3rem 1rem; font-size: 1.25rem; }
+    a { padding: 0.35rem 1rem; font-size: 1.125rem; }
   }
 
   .site-nav .nav-social {
