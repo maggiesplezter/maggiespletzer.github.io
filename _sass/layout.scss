@@ -363,6 +363,7 @@
 
   .sub-toggle {
     pointer-events: none;
+    margin-inline: auto;   // centre the label over the list of types
     border-block-end: 0;
     padding-block-end: 0.25rem;
 
