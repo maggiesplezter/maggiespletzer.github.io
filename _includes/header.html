@@ -18,8 +18,7 @@
   {% if og %}<meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/photos/{{ og.gallery }}/{{ og.file }}">{% endif %}
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preload" href="{{ site.baseurl }}/assets/fonts/cormorant-garamond.woff" as="font" type="font/woff" crossorigin>
-  {% comment %} ?v= changes on every build so browsers never pair new pages with a cached old stylesheet {% endcomment %}
-  <link href="{{ site.baseurl }}/assets/css/style.css?v={{ site.time | date: '%s' }}" rel="stylesheet">
+  <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
   <link rel="icon" href="{{ site.baseurl }}{{ site.mark }}" type="image/jpeg">
   <link rel="canonical" href="{{ site.url | append: page.url }}">
 </head>
