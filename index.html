@@ -3,23 +3,7 @@ layout: page
 hide_title: true
 description: Photography and software by Maggie Spletzer — digital, caffenol, Polaroid lifts and cyanotypes.
 ---
-{% comment %}
-  Mix the types in a fixed order: the newest photo of each type in turn
-  (Digital, Caffenol, Polaroid Lifts, Cyanotypes), then the next newest,
-  and so on.
-{% endcomment %}
-{% assign mixed = "" | split: "" %}
-{% assign most = 0 %}
-{% for g in site.data.galleries %}
-  {% assign n = site.data.photos | where: "gallery", g.id | size %}
-  {% if n > most %}{% assign most = n %}{% endif %}
-{% endfor %}
-{% assign last = most | minus: 1 %}
-{% for i in (0..last) %}
-  {% for g in site.data.galleries %}
-    {% assign gp = site.data.photos | where: "gallery", g.id | sort: "date" | reverse %}
-    {% if gp[i] %}{% assign mixed = mixed | push: gp[i] %}{% endif %}
-  {% endfor %}
-{% endfor %}
+{% comment %} Photos appear in their `order` (set in _data/photos.yml). {% endcomment %}
+{% assign photos = site.data.photos | sort: "order" %}
 <h1 class="sr-only">{{ site.name }} — photographs</h1>
-{% include photo-grid.html photos=mixed %}
+{% include photo-grid.html photos=photos %}

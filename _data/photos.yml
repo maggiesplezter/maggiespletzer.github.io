@@ -4,12 +4,14 @@
 #   width/height: pixel size of that file (filled in by the import script)
 #   title:    the photo's name (used as alt text if `alt` is empty; not shown on the site)
 #   alt:      description for screen readers (recommended)
-#   date:     when it was taken (YYYY-MM-DD); gallery pages show newest first
+#   order:    position on the home page and gallery pages (1 = first); new photos go last
+#   date:     when it was taken (YYYY-MM-DD)
 #   featured: true marks the photo used as the preview image when the site is
 #             shared (the first featured photo is used)
 
 - gallery: caffenol
   file: img-3407.jpg
+  order: 19
   width: 1536
   height: 2216
   title: Untitled
@@ -18,6 +20,7 @@
   featured: true
 - gallery: caffenol
   file: img-3408.jpg
+  order: 39
   width: 2266
   height: 1536
   title: Untitled
@@ -25,6 +28,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3409.jpg
+  order: 31
   width: 2248
   height: 1536
   title: Untitled
@@ -32,6 +36,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3410.jpg
+  order: 8
   width: 2248
   height: 1536
   title: Untitled
@@ -39,6 +44,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3411.jpg
+  order: 23
   width: 2340
   height: 1536
   title: Untitled
@@ -46,6 +52,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3412.jpg
+  order: 14
   width: 1516
   height: 1974
   title: Untitled
@@ -53,6 +60,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3413.jpg
+  order: 27
   width: 1536
   height: 2282
   title: Untitled
@@ -60,6 +68,7 @@
   date: 2026-08-24
 - gallery: caffenol
   file: img-3414.jpg
+  order: 5
   width: 2160
   height: 1453
   title: Untitled
@@ -67,6 +76,7 @@
   date: 2026-08-25
 - gallery: caffenol
   file: img-3415.jpg
+  order: 35
   width: 1536
   height: 2238
   title: Untitled
@@ -75,6 +85,7 @@
   featured: true
 - gallery: caffenol
   file: img-3416.jpg
+  order: 2
   width: 1536
   height: 2238
   title: Untitled
@@ -82,6 +93,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3417.jpg
+  order: 21
   width: 1535
   height: 2306
   title: Untitled
@@ -89,6 +101,7 @@
   date: 2026-09-21
 - gallery: caffenol
   file: img-3418.jpg
+  order: 16
   width: 1535
   height: 2306
   title: Untitled
@@ -96,6 +109,7 @@
   date: 2026-09-21
 - gallery: caffenol
   file: img-3419.jpg
+  order: 10
   width: 1535
   height: 2306
   title: Untitled
@@ -104,6 +118,7 @@
   featured: true
 - gallery: digital
   file: img-0312.jpg
+  order: 4
   width: 1600
   height: 2400
   title: Untitled
@@ -111,6 +126,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1188.jpg
+  order: 22
   width: 1600
   height: 2400
   title: Untitled
@@ -118,6 +134,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1204.jpg
+  order: 1
   width: 1600
   height: 2400
   title: Untitled
@@ -125,6 +142,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1297.jpg
+  order: 6
   width: 1600
   height: 2400
   title: Untitled
@@ -132,6 +150,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1670.jpg
+  order: 40
   width: 2400
   height: 1600
   title: Untitled
@@ -139,6 +158,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-2191.jpg
+  order: 32
   width: 1600
   height: 2400
   title: Untitled
@@ -146,6 +166,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-2865.jpg
+  order: 34
   width: 1600
   height: 2400
   title: Untitled
@@ -153,6 +174,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3068.jpg
+  order: 38
   width: 1600
   height: 2400
   title: Untitled
@@ -160,6 +182,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3150.jpg
+  order: 20
   width: 1600
   height: 2400
   title: Untitled
@@ -167,6 +190,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3218.jpg
+  order: 18
   width: 1600
   height: 2400
   title: Untitled
@@ -174,6 +198,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3495.jpg
+  order: 30
   width: 1600
   height: 2400
   title: Untitled
@@ -181,6 +206,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-4146.jpg
+  order: 12
   width: 1600
   height: 2400
   title: Untitled
@@ -188,6 +214,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-4201.jpg
+  order: 28
   width: 2400
   height: 1600
   title: Untitled
@@ -195,6 +222,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-5699.jpg
+  order: 15
   width: 2400
   height: 1600
   title: Untitled
@@ -202,6 +230,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-5757.jpg
+  order: 24
   width: 1600
   height: 2400
   title: Untitled
@@ -209,6 +238,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-6820.jpg
+  order: 36
   width: 2400
   height: 1600
   title: Untitled
@@ -216,6 +246,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-9466.jpg
+  order: 26
   width: 2400
   height: 1600
   title: Untitled
@@ -223,6 +254,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-01.jpg
+  order: 37
   width: 1498
   height: 2400
   title: Untitled
@@ -230,6 +262,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-02.jpg
+  order: 11
   width: 2400
   height: 1662
   title: Untitled
@@ -237,6 +270,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-03.jpg
+  order: 25
   width: 1783
   height: 2400
   title: Untitled
@@ -244,6 +278,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-04.jpg
+  order: 33
   width: 2400
   height: 1798
   title: Untitled
@@ -251,6 +286,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-05.jpg
+  order: 13
   width: 2400
   height: 1901
   title: Untitled
@@ -258,6 +294,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-06.jpg
+  order: 9
   width: 2400
   height: 1855
   title: Untitled
@@ -265,6 +302,7 @@
   date: 2026-10-12
 - gallery: polaroid-lifts
   file: polaroid-lift-01.jpg
+  order: 29
   width: 1250
   height: 1248
   title: Untitled
@@ -272,6 +310,7 @@
   date: 2026-10-12
 - gallery: polaroid-lifts
   file: polaroid-lift-02.jpg
+  order: 7
   width: 2199
   height: 2224
   title: Untitled
@@ -279,6 +318,7 @@
   date: 2026-10-12
 - gallery: polaroid-lifts
   file: polaroid-lift-03.jpg
+  order: 17
   width: 1173
   height: 1203
   title: Untitled
@@ -286,6 +326,7 @@
   date: 2026-10-12
 - gallery: polaroid-lifts
   file: polaroid-lift-04.jpg
+  order: 3
   width: 2400
   height: 1261
   title: Untitled

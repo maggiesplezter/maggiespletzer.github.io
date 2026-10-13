@@ -2,7 +2,7 @@
 layout: page
 ---
 {% assign g = site.data.galleries | where: "id", page.gallery | first %}
-{% assign photos = site.data.photos | where: "gallery", page.gallery | sort: "date" | reverse %}
+{% assign photos = site.data.photos | where: "gallery", page.gallery | sort: "order" %}
 {% include gallery-tabs.html %}
 {% if g.blurb %}<p class="lede">{{ g.blurb }}</p>{% endif %}
 {{ content }}

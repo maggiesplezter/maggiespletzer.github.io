@@ -52,13 +52,11 @@ originals in your own photo library or backup; the repo only holds web copies.
 4. In `_data/photos.yml`, give each new photo a `title` and `alt` text.
 5. Check it with `bash scripts/serve.sh`, then commit and push.
 
-Photos are shown in a masonry grid, each keeping its own shape. The **home
-page** mixes the types in a fixed order — the newest of each type in turn
-(Digital, Caffenol, Polaroid Lifts, Cyanotypes), then the next newest,
-and so on. The **gallery** menu drops down to one page per type, newest first.
-Change a photo's `date` to move it in either order.
-To remove a photo, delete its entry in `_data/photos.yml` and its two files
-(`assets/photos/<gallery>/<file>` and `.../thumbs/<file>`).
+Photos are shown in a masonry grid, each keeping its own shape, in the order
+set by each photo's `order` number in `_data/photos.yml` (1 = first). The home
+page shows every photo in that order; each gallery page shows its own photos in
+the same order. New imports get the next number, so they go last — change the
+numbers to move photos around.
 
 At ~400 KB per photo plus thumbnail, the repo can hold a couple of thousand
 photos before nearing GitHub Pages' 1 GB limit.

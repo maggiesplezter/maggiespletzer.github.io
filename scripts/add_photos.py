@@ -82,6 +82,7 @@ def main() -> None:
     gallery_ids = re.findall(r"^- id:\s*(\S+)", GALLERIES.read_text(), re.M)
     text = DATA.read_text()
     known = {(g, f.strip()) for g, f in re.findall(r"gallery:\s*(\S+)\s*\n\s*file:\s*(.+)", text)}
+    next_order = max([int(n) for n in re.findall(r"(?m)^  order: (\d+)", text)] or [0]) + 1
     entries = []
 
     for gid in gallery_ids:
@@ -106,9 +107,10 @@ def main() -> None:
             save_resized(img, THUMB_EDGE, PHOTOS / gid / "thumbs" / name, icc)
             known.add((gid, name))
             entries.append(
-                f"- gallery: {gid}\n  file: {name}\n  width: {width}\n  height: {height}\n"
+                f"- gallery: {gid}\n  file: {name}\n  order: {next_order}\n  width: {width}\n  height: {height}\n"
                 f"  title: Untitled\n  alt: \n  date: {date.isoformat()}\n"
             )
+            next_order += 1
 
             done = INBOX / "_imported" / gid
             done.mkdir(parents=True, exist_ok=True)
