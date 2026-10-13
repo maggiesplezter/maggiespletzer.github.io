@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+// No double-tap-to-zoom (it fired when tapping the menu button twice quickly).
+// Panning and pinch-to-zoom still work.
+html,
+a,
+button {
+  touch-action: manipulation;
+}
+
 body {
   margin: 0;
   background: var(--color-bg);
