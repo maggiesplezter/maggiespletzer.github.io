@@ -150,15 +150,31 @@
     gap: 0.875rem;
   }
 
+  // Leave room either side for the arrow buttons so they never sit on the photo:
+  // button (2.75rem) + edge gap (1.25rem) + breathing room (1rem) on each side.
   img {
-    max-width: 88vw;
+    max-width: calc(100vw - 2 * 5rem);
     max-height: 88dvh;
     object-fit: contain;
     box-shadow: 0 20px 40px rgba(34, 37, 43, 0.15);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;   // we handle swipes ourselves
   }
 
   &.single .lb-prev,
   &.single .lb-next { display: none; }
+}
+
+// Touch screens: swipe instead of arrows, so the photo can use the full width.
+@media (hover: none) and (pointer: coarse), (max-width: 40em) {
+  .lightbox img {
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100dvh - 7rem);   // clear of the close button
+  }
+
+  .lb-prev,
+  .lb-next { display: none; }
 }
 
 .lb-btn {
