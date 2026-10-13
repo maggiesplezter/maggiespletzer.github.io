@@ -53,9 +53,12 @@
   columns: 3 14rem;
   column-gap: clamp(0.5rem, 1.5vw, 1rem);
 
+  // Spacing is padding (inside the item), not margin: Safari moves the bottom
+  // margin of a column's last item to the top of the next column, which made
+  // the columns start at different heights on iPhone.
   li {
     break-inside: avoid;
-    margin-block-end: clamp(0.5rem, 1.5vw, 1rem);
+    padding-block-end: clamp(0.5rem, 1.5vw, 1rem);
   }
 
   a {
