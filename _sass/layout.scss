@@ -358,12 +358,14 @@
     font-size: 0.9375rem;
   }
 
-  // In the phone menu the gallery types are always listed under "gallery"
-  .has-sub { text-align: center; }
+  // In the phone menu the gallery types are always listed under "gallery",
+  // left-aligned so they start under the G. The group as a whole stays centred.
+  .has-sub { text-align: start; }
 
   .sub-toggle {
     pointer-events: none;
-    margin-inline: auto;   // centre the label over the list of types
+    margin-inline: 0;
+    text-align: start;
     border-block-end: 0;
     padding-block-end: 0.25rem;
 
@@ -385,7 +387,7 @@
 
     &::before { display: none; }
 
-    a { padding: 0.3rem 1rem; font-size: 1.25rem; }
+    a { padding: 0.3rem 1rem; font-size: 1.25rem; text-align: start; }
   }
 
   .site-nav .nav-social {
