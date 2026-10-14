@@ -166,7 +166,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3068.jpg
-  order: 2
+  order: 18
   width: 1600
   height: 2400
   title: Untitled
@@ -246,7 +246,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-01.jpg
-  order: 18
+  order: 2
   width: 1498
   height: 2400
   title: Untitled
