@@ -1,6 +1,7 @@
 # Gallery categories, in the order they appear.
 # `id` must match the folder name under assets/photos/ and the page in gallery/.
 # `blurb` (optional) is shown under the tabs on that gallery's page; it may contain HTML links.
+# `hidden: true` = photos appear on the home page only: no menu item, tab or gallery page.
 - id: digital
   title: Digital
 - id: caffenol
@@ -10,3 +11,6 @@
   title: Polaroid Lifts
 - id: cyanotypes
   title: Cyanotypes
+- id: home-only
+  title: Home only
+  hidden: true

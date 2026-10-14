@@ -61,6 +61,10 @@ numbers to move photos around.
 At ~400 KB per photo plus thumbnail, the repo can hold a couple of thousand
 photos before nearing GitHub Pages' 1 GB limit.
 
+**Home-page-only photos:** drop them in `_photos-inbox/home-only/` and import as
+usual. They appear on the home page but not in the Gallery menu, the tabs, or any
+gallery page (that type is marked `hidden: true` in `_data/galleries.yml`).
+
 To add a gallery type, add an entry to `_data/galleries.yml` and copy any file
 in `gallery/` to `gallery/<id>.md`, changing `title`, `gallery` and `permalink`.
 

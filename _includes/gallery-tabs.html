@@ -1,6 +1,6 @@
 <nav class="gallery-tabs" aria-label="Gallery types">
   <ul>
-    {% for t in site.data.galleries %}
+    {% for t in site.data.galleries %}{% if t.hidden %}{% continue %}{% endif %}
     <li><a href="{{ site.baseurl }}/gallery/{{ t.id }}/" {% if t.id == page.gallery %}aria-current="page"{% endif %}>{{ t.title }}</a></li>
     {% endfor %}
   </ul>

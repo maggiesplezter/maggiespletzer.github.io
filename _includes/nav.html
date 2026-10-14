@@ -15,7 +15,7 @@
       <li class="has-sub{% if page.gallery %} is-current{% endif %}">
         <button type="button" class="sub-toggle" aria-expanded="false" aria-controls="gallery-menu">gallery</button>
         <ul class="sub-menu" id="gallery-menu">
-          {% for g in site.data.galleries %}
+          {% for g in site.data.galleries %}{% if g.hidden %}{% continue %}{% endif %}
           <li><a href="{{ site.baseurl }}/gallery/{{ g.id }}/" {% if page.gallery == g.id %}aria-current="page"{% endif %}>{{ g.title }}</a></li>
           {% endfor %}
         </ul>
