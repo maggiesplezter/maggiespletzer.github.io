@@ -76,6 +76,14 @@
   }
 
   a:hover img { transform: scale(1.02); }
+
+  // Laid out by assets/js/masonry.js: photos placed left to right
+  &.is-masonry {
+    columns: auto;
+    position: relative;
+
+    li { position: absolute; }
+  }
 }
 
 @media (max-width: 30em) {

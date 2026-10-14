@@ -1,5 +1,6 @@
 {% comment %}
-  Masonry grid: each photo keeps its own shape, packed into columns.
+  Masonry grid: each photo keeps its own shape. masonry.js lays it out
+  left to right; without JS it falls back to CSS columns.
   Clicking opens the full-size photo in the lightbox.
   Pass `photos` (array from site.data.photos).
 {% endcomment %}
@@ -13,3 +14,4 @@
   </li>
   {% endfor %}
 </ul>
+<script src="{{ site.baseurl }}/assets/js/masonry.js"></script>
