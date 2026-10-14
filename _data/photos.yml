@@ -11,7 +11,7 @@
 
 - gallery: caffenol
   file: img-3407.jpg
-  order: 34
+  order: 35
   width: 1536
   height: 2216
   title: Untitled
@@ -28,7 +28,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3409.jpg
-  order: 46
+  order: 47
   width: 2248
   height: 1536
   title: Untitled
@@ -44,7 +44,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3411.jpg
-  order: 43
+  order: 44
   width: 2340
   height: 1536
   title: Untitled
@@ -52,7 +52,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3412.jpg
-  order: 24
+  order: 25
   width: 1516
   height: 1974
   title: Untitled
@@ -60,7 +60,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3414.jpg
-  order: 40
+  order: 41
   width: 2160
   height: 1453
   title: Untitled
@@ -68,7 +68,7 @@
   date: 2026-08-25
 - gallery: caffenol
   file: img-3415.jpg
-  order: 29
+  order: 30
   width: 1536
   height: 2238
   title: Untitled
@@ -78,14 +78,14 @@
 - gallery: caffenol
   file: img-3416.jpg
   order: 3
-  width: 1536
-  height: 2238
+  width: 1647
+  height: 2400
   title: Untitled
   alt: Globe thistle flower head on a tall stem
   date: 2026-10-12
 - gallery: caffenol
   file: img-3417.jpg
-  order: 38
+  order: 39
   width: 1535
   height: 2306
   title: Untitled
@@ -118,7 +118,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1188.jpg
-  order: 28
+  order: 29
   width: 1600
   height: 2400
   title: Untitled
@@ -134,7 +134,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1297.jpg
-  order: 23
+  order: 24
   width: 1600
   height: 2400
   title: Untitled
@@ -142,7 +142,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-1670.jpg
-  order: 25
+  order: 26
   width: 2400
   height: 1600
   title: Untitled
@@ -150,7 +150,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-2191.jpg
-  order: 39
+  order: 40
   width: 1600
   height: 2400
   title: Untitled
@@ -174,7 +174,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3150.jpg
-  order: 44
+  order: 45
   width: 1600
   height: 2400
   title: Untitled
@@ -198,7 +198,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-4146.jpg
-  order: 35
+  order: 36
   width: 1600
   height: 2400
   title: Untitled
@@ -222,7 +222,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-5757.jpg
-  order: 37
+  order: 38
   width: 1600
   height: 2400
   title: Untitled
@@ -230,7 +230,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-6820.jpg
-  order: 41
+  order: 42
   width: 2400
   height: 1600
   title: Untitled
@@ -238,7 +238,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-9466.jpg
-  order: 32
+  order: 33
   width: 2400
   height: 1600
   title: Untitled
@@ -278,7 +278,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-05.jpg
-  order: 31
+  order: 32
   width: 2400
   height: 1901
   title: Untitled
@@ -286,7 +286,7 @@
   date: 2026-10-12
 - gallery: cyanotypes
   file: cyanotype-06.jpg
-  order: 27
+  order: 28
   width: 2400
   height: 1855
   title: Untitled
@@ -326,7 +326,7 @@
   date: 2026-10-12
 - gallery: home-only
   file: calla-lily-1.jpg
-  order: 36
+  order: 37
   width: 2400
   height: 1666
   title: Untitled
@@ -334,7 +334,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: calla-lily-2.jpg
-  order: 42
+  order: 43
   width: 1620
   height: 2400
   title: Untitled
@@ -350,7 +350,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: street-lamp.jpg
-  order: 33
+  order: 34
   width: 1736
   height: 2400
   title: Untitled
@@ -358,7 +358,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: gerbera.jpg
-  order: 45
+  order: 46
   width: 2400
   height: 1598
   title: Untitled
@@ -366,7 +366,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: conservatory.jpg
-  order: 26
+  order: 27
   width: 2400
   height: 1661
   title: Untitled
@@ -374,9 +374,17 @@
   date: 2026-10-14
 - gallery: home-only
   file: allium.jpg
-  order: 30
+  order: 31
   width: 2400
   height: 1829
   title: Untitled
   alt: Round allium seed head on a single stem against grey
+  date: 2026-10-14
+- gallery: caffenol
+  file: mushrooms.jpg
+  order: 23
+  width: 2400
+  height: 1624
+  title: Untitled
+  alt: Cluster of small mushrooms growing up through bark mulch
   date: 2026-10-14
