@@ -11,7 +11,7 @@
 
 - gallery: caffenol
   file: img-3407.jpg
-  order: 35
+  order: 34
   width: 1536
   height: 2216
   title: Untitled
@@ -28,7 +28,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3409.jpg
-  order: 47
+  order: 46
   width: 2248
   height: 1536
   title: Untitled
@@ -44,7 +44,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3411.jpg
-  order: 44
+  order: 43
   width: 2340
   height: 1536
   title: Untitled
@@ -59,16 +59,8 @@
   alt: Double exposure of a statue's face layered with tree branches
   date: 2026-10-12
 - gallery: caffenol
-  file: img-3413.jpg
-  order: 32
-  width: 1536
-  height: 2282
-  title: Untitled
-  alt: Window and door trim on the side of a clapboard house
-  date: 2026-08-24
-- gallery: caffenol
   file: img-3414.jpg
-  order: 41
+  order: 40
   width: 2160
   height: 1453
   title: Untitled
@@ -93,7 +85,7 @@
   date: 2026-10-12
 - gallery: caffenol
   file: img-3417.jpg
-  order: 39
+  order: 38
   width: 1535
   height: 2306
   title: Untitled
@@ -158,7 +150,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-2191.jpg
-  order: 40
+  order: 39
   width: 1600
   height: 2400
   title: Untitled
@@ -182,7 +174,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-3150.jpg
-  order: 45
+  order: 44
   width: 1600
   height: 2400
   title: Untitled
@@ -206,7 +198,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-4146.jpg
-  order: 36
+  order: 35
   width: 1600
   height: 2400
   title: Untitled
@@ -230,7 +222,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-5757.jpg
-  order: 38
+  order: 37
   width: 1600
   height: 2400
   title: Untitled
@@ -238,7 +230,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-6820.jpg
-  order: 42
+  order: 41
   width: 2400
   height: 1600
   title: Untitled
@@ -246,7 +238,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-9466.jpg
-  order: 33
+  order: 32
   width: 2400
   height: 1600
   title: Untitled
@@ -334,7 +326,7 @@
   date: 2026-10-12
 - gallery: home-only
   file: calla-lily-1.jpg
-  order: 37
+  order: 36
   width: 2400
   height: 1666
   title: Untitled
@@ -342,7 +334,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: calla-lily-2.jpg
-  order: 43
+  order: 42
   width: 1620
   height: 2400
   title: Untitled
@@ -358,7 +350,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: street-lamp.jpg
-  order: 34
+  order: 33
   width: 1736
   height: 2400
   title: Untitled
@@ -366,7 +358,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: gerbera.jpg
-  order: 46
+  order: 45
   width: 2400
   height: 1598
   title: Untitled
