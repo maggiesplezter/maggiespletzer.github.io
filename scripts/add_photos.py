@@ -31,6 +31,10 @@ try:
 except ImportError:
     sys.exit("Pillow is needed. Install it with:\n  python3 -m pip install --user Pillow")
 
+# Large flatbed scans can be hundreds of megapixels; they're our own files, so
+# allow them, and decode JPEGs at reduced size (much faster, far less memory).
+Image.MAX_IMAGE_PIXELS = None
+
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 INBOX = ROOT / "_photos-inbox"
 PHOTOS = ROOT / "assets" / "photos"
@@ -94,6 +98,7 @@ def main() -> None:
             with Image.open(src) as im:
                 date = taken_date(im, src)
                 icc = im.info.get("icc_profile")
+                im.draft("RGB", (FULL_EDGE, FULL_EDGE))   # JPEG: decode at ≥ FULL_EDGE, not full size
                 img = to_rgb(ImageOps.exif_transpose(im))
 
             base = slugify(src.stem)
