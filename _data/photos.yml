@@ -238,7 +238,7 @@
   date: 2026-10-12
 - gallery: digital
   file: img-9466.jpg
-  order: 33
+  order: 31
   width: 2400
   height: 1600
   title: Untitled
@@ -374,7 +374,7 @@
   date: 2026-10-14
 - gallery: home-only
   file: allium.jpg
-  order: 31
+  order: 33
   width: 2400
   height: 1829
   title: Untitled
