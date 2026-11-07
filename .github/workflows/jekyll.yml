@@ -28,7 +28,11 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@14594264cd68ce8a2345dd349bc3d138a4ef85c8 # v1.327.0
         with:
-          bundler-cache: true # reads .ruby-version, runs bundle install, caches gems
+          # Newest 3.4.x prebuilt for the runner image. .ruby-version pins
+          # 3.4.1 for local builds, but ubuntu-latest (now 26.04) has no
+          # prebuilt 3.4.1, which 404s in Setup Ruby.
+          ruby-version: '3.4'
+          bundler-cache: true # runs bundle install, caches gems
           cache-version: 1
 
       # Ask GitHub where the site is published, so links work at
